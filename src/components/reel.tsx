@@ -11,7 +11,7 @@ const Reel = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]">
-        <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
+        <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent" />
         <div className="absolute inset-0 animate-spin-slow">
           <Image
             src="https://drive.google.com/uc?export=view&id=1VQV9l9k-6aPpgB_brWKBeEclYoGI1gvg"
@@ -21,7 +21,7 @@ const Reel = () => {
           />
         </div>
 
-        <div className="relative h-full w-full rounded-full shadow-2xl">
+        <div className="relative h-full w-full rounded-full shadow-2xl backdrop-blur-lg">
           <div
             className="absolute inset-0 rounded-full"
             style={{
@@ -54,7 +54,7 @@ const Reel = () => {
         </DialogTrigger>
       </div>
 
-      <DialogContent className="h-dvh w-dvw max-w-full p-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw]">
+      <DialogContent className="h-dvh w-dvh max-w-full p-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw]">
         <video
           className="h-full w-full object-contain"
           src="https://videos.pexels.com/video-files/3209828/3209828-hd_1280_720_30fps.mp4"
