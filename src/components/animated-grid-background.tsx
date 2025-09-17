@@ -32,7 +32,7 @@ const Grid = ({ grayscale }: { grayscale?: boolean }) => {
           )}
         >
           {[...columnImages, ...columnImages].map((image, imgIndex) => (
-            <div key={`${image.id}-${imgIndex}`} className="relative h-[216px] w-full shrink-0">
+            <div key={`${image.id}-${imgIndex}`} className="relative h-[324px] w-full shrink-0">
               <Image
                 src={image.imageUrl}
                 alt={image.description}
