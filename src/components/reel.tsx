@@ -32,22 +32,27 @@ const Reel = () => {
           </svg>
         </div>
 
-        <div
-            className="relative h-[75%] w-[75%] rounded-full shadow-2xl ring-2 ring-white/10"
+        <div className="relative h-full w-full rounded-full shadow-2xl">
+          <div
+            className="absolute inset-0 rounded-full"
             style={{
-                maskImage: 'radial-gradient(circle, transparent 55%, black 56%)',
-                WebkitMaskImage: 'radial-gradient(circle, transparent 55%, black 56%)',
+              padding: '3rem',
+              maskImage: 'radial-gradient(transparent 0%, black 1px)',
+              WebkitMaskImage: 'radial-gradient(transparent 0%, black 1px)',
+              maskPosition: 'center',
+              maskRepeat: 'no-repeat',
             }}
-        >
-          <video
-            className="h-full w-full object-cover"
-            src="https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_30fps.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            aria-label="Showreel video preview"
-          />
+          >
+            <video
+              className="h-full w-full rounded-full object-cover"
+              src="https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_30fps.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Showreel video preview"
+            />
+          </div>
         </div>
 
         <DialogTrigger asChild>
