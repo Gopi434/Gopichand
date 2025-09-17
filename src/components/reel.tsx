@@ -11,7 +11,7 @@ const Reel = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
-        <div className="absolute inset-0 animate-spin-slow z-10">
+        <div className="absolute inset-0 animate-spin-slow z-10 p-4">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
             alt="Watch showreel text"
