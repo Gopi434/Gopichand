@@ -21,7 +21,7 @@ const AnimatedGridBackground = () => {
   ];
 
   return (
-    <div className="absolute inset-0 z-0 h-full w-full overflow-hidden opacity-30">
+    <div className="absolute inset-0 z-0 h-full w-full overflow-hidden opacity-5">
       <div className="grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4">
         {columns.map((columnImages, colIndex) => (
           <div
