@@ -5,19 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useMemo, useState, useEffect } from 'react';
 
-const AnimatedGridBackground = () => {
-  const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
+const Grid = ({ grayscale }: { grayscale?: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
 
   if (!images.length) return null;
@@ -31,7 +19,7 @@ const AnimatedGridBackground = () => {
     images.slice(0, 4),
   ];
 
-  const Grid = ({ grayscale }: { grayscale?: boolean }) => (
+  return (
     <div className={cn("grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", grayscale && "grayscale")}>
       {columns.map((columnImages, colIndex) => (
         <div
@@ -60,21 +48,41 @@ const AnimatedGridBackground = () => {
       ))}
     </div>
   );
+};
 
+const SpotlightEffect = () => {
+    const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
+
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            setMousePosition({ x: event.clientX, y: event.clientY });
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    return (
+        <div
+            className="absolute inset-0 opacity-40"
+            style={{
+                maskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
+                WebkitMaskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
+            }}
+        >
+            <Grid />
+        </div>
+    )
+}
+
+const AnimatedGridBackground = () => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <Grid grayscale />
       </div>
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          maskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
-          WebkitMaskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
-        }}
-      >
-        <Grid />
-      </div>
+      <SpotlightEffect />
     </div>
   );
 };
