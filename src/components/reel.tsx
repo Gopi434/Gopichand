@@ -12,9 +12,9 @@ const Reel = () => {
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]">
         <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent" />
-        <div className="absolute inset-0 animate-spin-slow">
+        <div className="absolute inset-0 animate-spin-slow z-10">
           <Image
-            src="https://drive.google.com/uc?export=view&id=1VQV9l9k-6aPpgB_brWKBeEclYoGI1gvg"
+            src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
             alt="Watch showreel text"
             fill
             className="object-contain"
@@ -47,7 +47,7 @@ const Reel = () => {
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-10 flex h-20 w-20 items-center justify-center rounded-full bg-primary/80 text-background backdrop-blur-sm transition-all duration-300 animate-pulse hover:animate-none hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
+            className="group absolute z-20 flex h-20 w-20 items-center justify-center rounded-full bg-primary/80 text-background backdrop-blur-sm transition-all duration-300 animate-pulse hover:animate-none hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
           >
             <Play className="ml-1 h-8 w-8 transition-transform duration-300 group-hover:scale-125" />
           </button>
