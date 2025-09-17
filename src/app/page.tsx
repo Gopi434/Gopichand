@@ -22,7 +22,7 @@ export default function Home() {
 
       <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8">
         <Image
-          src="https://placehold.co/120x40/000000/FFFFFF/png?text=REELVERSE"
+          src="https://drive.google.com/uc?export=view&id=1PzpN3wg_KZ44NypjUJZANtk8CqquVN5z"
           alt="ReelVerse Logo"
           width={120}
           height={40}
