@@ -20,7 +20,7 @@ const Reel = () => {
           />
         </div>
 
-        <div className="relative h-full w-full rounded-full shadow-2xl backdrop-blur-lg border-[0.3rem] border-white">
+        <div className="relative h-full w-full rounded-full shadow-2xl backdrop-blur-lg border-[0.3rem] border-white p-[2%]">
           <div
             className="absolute inset-0 rounded-full"
           >
