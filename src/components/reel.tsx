@@ -14,7 +14,7 @@ const Reel = () => {
         <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
         <div className="absolute inset-0 animate-spin-slow">
           <Image
-            src="https://drive.google.com/uc?export=view&id=1pLCXs9j5syrWUeqnrb66YoiaNO5Kq9tP"
+            src="https://drive.google.com/uc?export=view&id=1VQV9l9k-6aPpgB_brWKBeEclYoGI1gvg"
             alt="Watch showreel text"
             fill
             className="object-contain"
