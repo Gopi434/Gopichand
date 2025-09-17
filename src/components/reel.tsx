@@ -14,7 +14,7 @@ const Reel = () => {
         <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
         <div className="absolute inset-0 animate-spin-slow">
           <Image
-            src="https://placehold.co/500x500/000000/FFFFFF/png?text=WATCH+SHOWREEL&font=sans"
+            src="https://drive.google.com/uc?export=view&id=1pLCXs9j5syrWUeqnrb66YoiaNO5Kq9tP"
             alt="Watch showreel text"
             fill
             className="object-contain"
