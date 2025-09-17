@@ -37,7 +37,7 @@ const AnimatedGridBackground = () => {
                   src={image.imageUrl}
                   alt={image.description}
                   fill
-                  className="object-cover grayscale"
+                  className="object-cover grayscale transition-all duration-300 hover:grayscale-0"
                   sizes="(max-width: 768px) 50vw, 25vw"
                   data-ai-hint={image.imageHint}
                   priority={imgIndex < 2 && colIndex < 2}
