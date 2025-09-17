@@ -32,7 +32,13 @@ const Reel = () => {
           </svg>
         </div>
 
-        <div className="relative h-[75%] w-[75%] overflow-hidden rounded-full shadow-2xl ring-2 ring-white/10">
+        <div
+            className="relative h-[75%] w-[75%] rounded-full shadow-2xl ring-2 ring-white/10"
+            style={{
+                maskImage: 'radial-gradient(circle, transparent 55%, black 56%)',
+                WebkitMaskImage: 'radial-gradient(circle, transparent 55%, black 56%)',
+            }}
+        >
           <video
             className="h-full w-full object-cover"
             src="https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_30fps.mp4"
