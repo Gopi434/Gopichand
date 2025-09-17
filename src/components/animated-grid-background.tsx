@@ -36,7 +36,7 @@ const AnimatedGridBackground = () => {
             )}
           >
             {[...columnImages, ...columnImages].map((image, imgIndex) => (
-              <div key={`${image.id}-${imgIndex}`} className="relative h-[600px] w-full shrink-0">
+              <div key={`${image.id}-${imgIndex}`} className="relative h-[360px] w-full shrink-0">
                 <Image
                   src={image.imageUrl}
                   alt={image.description}
