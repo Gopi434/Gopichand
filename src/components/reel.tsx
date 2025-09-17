@@ -3,6 +3,7 @@
 import { Play } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Reel = () => {
   const [open, setOpen] = useState(false);
@@ -12,24 +13,12 @@ const Reel = () => {
       <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]">
         <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
         <div className="absolute inset-0 animate-spin-slow">
-          <svg viewBox="0 0 100 100" className="h-full w-full fill-current text-foreground">
-            <defs>
-              <path
-                id="circlePath"
-                d="
-                M 50, 50
-                m -37, 0
-                a 37,37 0 1,1 74,0
-                a 37,37 0 1,1 -74,0
-              "
-              />
-            </defs>
-            <text letterSpacing="2" fontSize="6">
-              <textPath href="#circlePath" startOffset="0%">
-                WATCH SHOWREEL • WATCH SHOWREEL • &nbsp;
-              </textPath>
-            </text>
-          </svg>
+          <Image
+            src="https://placehold.co/500x500/000000/FFFFFF/png?text=WATCH+SHOWREEL&font=sans"
+            alt="Watch showreel text"
+            fill
+            className="object-contain"
+          />
         </div>
 
         <div className="relative h-full w-full rounded-full shadow-2xl">
