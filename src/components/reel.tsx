@@ -10,7 +10,7 @@ const Reel = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]">
-        <div className="absolute inset-0 -m-10 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
+        <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent bg-clip-padding backdrop-blur-lg" />
         <div className="absolute inset-0 animate-spin-slow">
           <svg viewBox="0 0 100 100" className="h-full w-full fill-current text-foreground">
             <defs>
