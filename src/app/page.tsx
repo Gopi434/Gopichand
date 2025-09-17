@@ -24,8 +24,8 @@ export default function Home() {
         <Image
           src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
           alt="ReelVerse Logo"
-          width={120}
-          height={40}
+          width={240}
+          height={80}
         />
       </header>
 
