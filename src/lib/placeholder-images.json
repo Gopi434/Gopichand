@@ -1,3 +1,24 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    { "id": "1", "description": "Abstract architecture", "imageUrl": "https://picsum.photos/seed/101/400/600", "imageHint": "abstract architecture" },
+    { "id": "2", "description": "Neon lights in city", "imageUrl": "https://picsum.photos/seed/102/400/600", "imageHint": "neon lights" },
+    { "id": "3", "description": "Night cityscape", "imageUrl": "https://picsum.photos/seed/103/400/600", "imageHint": "cityscape night" },
+    { "id": "4", "description": "Futuristic tunnel", "imageUrl": "https://picsum.photos/seed/104/400/600", "imageHint": "futuristic tunnel" },
+    { "id": "5", "description": "Glowing data streams", "imageUrl": "https://picsum.photos/seed/105/400/600", "imageHint": "data stream" },
+    { "id": "6", "description": "Geometric patterns", "imageUrl": "https://picsum.photos/seed/106/400/600", "imageHint": "geometric patterns" },
+    { "id": "7", "description": "Cyberpunk alley", "imageUrl": "https://picsum.photos/seed/107/400/600", "imageHint": "cyberpunk alley" },
+    { "id": "8", "description": "Man looking at code", "imageUrl": "https://picsum.photos/seed/108/400/600", "imageHint": "man code" },
+    { "id": "9", "description": "Digital art", "imageUrl": "https://picsum.photos/seed/109/400/600", "imageHint": "digital art" },
+    { "id": "10", "description": "Light trails on highway", "imageUrl": "https://picsum.photos/seed/110/400/600", "imageHint": "light trails" },
+    { "id": "11", "description": "Minimalist interior", "imageUrl": "https://picsum.photos/seed/111/400/600", "imageHint": "minimalist interior" },
+    { "id": "12", "description": "Holographic display", "imageUrl": "https://picsum.photos/seed/112/400/600", "imageHint": "holographic display" },
+    { "id": "13", "description": "Abstract light painting", "imageUrl": "https://picsum.photos/seed/113/400/600", "imageHint": "light painting" },
+    { "id": "14", "description": "Skyscraper looking up", "imageUrl": "https://picsum.photos/seed/114/400/600", "imageHint": "skyscraper view" },
+    { "id": "15", "description": "Circuit board macro", "imageUrl": "https://picsum.photos/seed/115/400/600", "imageHint": "circuit board" },
+    { "id": "16", "description": "Rainy city street", "imageUrl": "https://picsum.photos/seed/116/400/600", "imageHint": "rainy street" },
+    { "id": "17", "description": "Space nebula", "imageUrl": "https://picsum.photos/seed/117/400/600", "imageHint": "space nebula" },
+    { "id": "18", "description": "Woman with VR headset", "imageUrl": "https://picsum.photos/seed/118/400/600", "imageHint": "woman vr" },
+    { "id": "19", "description": "Network connections", "imageUrl": "https://picsum.photos/seed/119/400/600", "imageHint": "network connections" },
+    { "id": "20", "description": "Modern building facade", "imageUrl": "https://picsum.photos/seed/120/400/600", "imageHint": "modern facade" }
+  ]
 }
