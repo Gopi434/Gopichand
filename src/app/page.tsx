@@ -22,7 +22,7 @@ export default function Home() {
 
       <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8">
         <Image
-          src="https://drive.google.com/uc?export=view&id=1PzpN3wg_KZ44NypjUJZANtk8CqquVN5z"
+          src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
           alt="ReelVerse Logo"
           width={120}
           height={40}
