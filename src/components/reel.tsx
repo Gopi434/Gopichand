@@ -10,8 +10,8 @@ const Reel = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px]">
-        <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent" />
+      <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
+        <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-white/10 to-transparent border border-white" />
         <div className="absolute inset-0 animate-spin-slow z-10">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
