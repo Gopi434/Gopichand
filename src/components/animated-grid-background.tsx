@@ -79,7 +79,7 @@ const SpotlightEffect = () => {
 const AnimatedGridBackground = () => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-15">
         <Grid grayscale />
       </div>
       <SpotlightEffect />

@@ -1,4 +1,4 @@
-# **App Name**: ReelVerse
+# **App Name**: Gopichand
 
 ## Core Features:
 

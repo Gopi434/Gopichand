@@ -20,11 +20,11 @@ export default function Home() {
     <main className="relative h-dvh w-full overflow-hidden bg-background">
       <AnimatedGridBackground />
 
-      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
+      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[2%]">
         <Image
           src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
           alt="ReelVerse Logo"
-          width={406}
+          width={300}
           height={135}
         />
       </header>
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center p-8">
-        <Button asChild variant="outline" className="bg-background/20 backdrop-blur-sm">
+        <Button asChild variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
           <Link href="https://www.behance.net" target="_blank">
             <BehanceIcon className="h-5 w-5 mr-2" />
             Explore on Behance
