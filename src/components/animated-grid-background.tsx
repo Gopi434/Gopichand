@@ -50,7 +50,7 @@ const Grid = ({ grayscale }: { grayscale?: boolean }) => {
   );
 };
 
-const SpotlightEffect = () => {
+const SpotlightEffect = ({ isReelHovered }: { isReelHovered: boolean }) => {
     const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
 
     useEffect(() => {
@@ -63,12 +63,15 @@ const SpotlightEffect = () => {
         };
     }, []);
 
+    const xPos = isReelHovered ? -1000 : mousePosition.x;
+    const yPos = isReelHovered ? -1000 : mousePosition.y;
+
     return (
         <div
             className="absolute inset-0 opacity-80"
             style={{
-                maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
-                WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
+                maskImage: `radial-gradient(circle 250px at ${xPos}px ${yPos}px, black 25%, transparent 100%)`,
+                WebkitMaskImage: `radial-gradient(circle 250px at ${xPos}px ${yPos}px, black 25%, transparent 100%)`,
             }}
         >
             <Grid />
@@ -76,13 +79,13 @@ const SpotlightEffect = () => {
     )
 }
 
-const AnimatedGridBackground = () => {
+const AnimatedGridBackground = ({ isReelHovered }: { isReelHovered: boolean }) => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
       <div className="absolute inset-0 opacity-15">
         <Grid grayscale />
       </div>
-      <SpotlightEffect />
+      <SpotlightEffect isReelHovered={isReelHovered} />
     </div>
   );
 };

@@ -1,13 +1,18 @@
+"use client";
+
 import AnimatedGridBackground from '@/components/animated-grid-background';
 import { Button } from '@/components/ui/button';
 import Reel from '@/components/reel';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isReelHovered, setIsReelHovered] = useState(false);
+
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-background">
-      <AnimatedGridBackground />
+      <AnimatedGridBackground isReelHovered={isReelHovered} />
 
       <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
        
@@ -22,7 +27,11 @@ export default function Home() {
         </Link>
       </header>
 
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
+      <div 
+        className="relative z-10 flex h-full w-full items-center justify-center"
+        onMouseEnter={() => setIsReelHovered(true)}
+        onMouseLeave={() => setIsReelHovered(false)}
+      >
         <Reel />
       </div>
 
