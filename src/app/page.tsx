@@ -9,11 +9,11 @@ export default function Home() {
     <main className="relative h-dvh w-full overflow-hidden bg-background">
       <AnimatedGridBackground />
 
-      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[2%]">
+      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
         <Image
           src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
           alt="ReelVerse Logo"
-          width={300}
+          width={250}
           height={135}
         />
       </header>
@@ -23,14 +23,14 @@ export default function Home() {
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center p-8">
-        <Button asChild variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-          <Link href="https://www.behance.net" target="_blank">
+        <Button asChild variant="default" className="h-12 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
+          <Link href="https://www.behance.net/gopichandtalluri" target="_blank">
             <Image 
               src="https://raw.githubusercontent.com/Gopi434/Media/9a124b8514e80d33dd060d8168628d072e330573/behance%20icon.svg"
               alt="Behance Icon"
               width={20}
               height={20}
-              className="mr-2"
+              className="mr-1"
             />
             Portfolio
           </Link>
