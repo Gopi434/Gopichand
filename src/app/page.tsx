@@ -22,15 +22,14 @@ export default function Home() {
         <Reel />
       </div>
 
-      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center p-8">
-        <Button asChild variant="default" className="h-12 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-          <Link href="https://www.behance.net/gopichandtalluri" target="_blank">
+      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[2%]">
+        <Button asChild variant="default" className="h-12 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
+          <Link href="https://www.behance.net/gopichandtalluri" target="_blank" className="gap-1">
             <Image 
               src="https://raw.githubusercontent.com/Gopi434/Media/9a124b8514e80d33dd060d8168628d072e330573/behance%20icon.svg"
               alt="Behance Icon"
-              width={20}
+              width={35}
               height={20}
-              className="mr-1"
             />
             Portfolio
           </Link>
