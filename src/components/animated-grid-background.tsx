@@ -65,7 +65,7 @@ const SpotlightEffect = () => {
 
     return (
         <div
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-80"
             style={{
                 maskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
                 WebkitMaskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,

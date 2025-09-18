@@ -26,7 +26,7 @@ const Reel = () => {
         </div>
 
         {/* Layer 2: Spinning Stamp */}
-        <div className="absolute inset-0 z-10 animate-spin-slow">
+        <div className="absolute inset-0 z-10  animate-spin-slow">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
             alt="Watch showreel text"
