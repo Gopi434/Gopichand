@@ -67,8 +67,8 @@ const SpotlightEffect = () => {
         <div
             className="absolute inset-0 opacity-80"
             style={{
-                maskImage: `radial-gradient(circle 400px at ${mousePosition.x}px ${mousePosition.y}px, black 50%, transparent 100%)`,
-                WebkitMaskImage: `radial-gradient(circle 400px at ${mousePosition.x}px ${mousePosition.y}px, black 50%, transparent 100%)`,
+                maskImage: `radial-gradient(circle 300px at ${mousePosition.x}px ${mousePosition.y}px, black 50%, transparent 100%)`,
+                WebkitMaskImage: `radial-gradient(circle 300px at ${mousePosition.x}px ${mousePosition.y}px, black 50%, transparent 100%)`,
             }}
         >
             <Grid />
