@@ -11,7 +11,7 @@ const Reel = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
-        <div className="absolute inset-0 animate-spin-slow z-10 p-6">
+        <div className="absolute inset-0 animate-spin-slow z-10 p-2">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
             alt="Watch showreel text"
@@ -20,20 +20,17 @@ const Reel = () => {
           />
         </div>
 
-        <div className="relative h-full w-full rounded-full shadow-2xl backdrop-blur-lg border-[0.15rem] border-white p-[2%]">
-          <div
-            className="absolute inset-0 rounded-full"
-          >
-            <video
-              className="h-full w-full rounded-full object-cover"
-              src="https://videos.pexels.com/video-files/3209828/3209828-sd_640_360_30fps.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              aria-label="Showreel video preview"
-            />
-          </div>
+        <div className="relative h-full w-full rounded-full shadow-2xl overflow-hidden group">
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label="Showreel video preview"
+          />
+          <div className="absolute inset-0 rounded-full border-[2.5rem] border-background"></div>
         </div>
 
         <DialogTrigger asChild>
