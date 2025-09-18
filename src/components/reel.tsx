@@ -36,7 +36,7 @@ const Reel = () => {
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-20 flex h-20 w-20 items-center justify-center rounded-full bg-black text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
+            className="group absolute z-20 flex h-20 w-20 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
           >
             <Play className="ml-1 h-8 w-8 fill-white stroke-none transition-transform duration-300 group-hover:scale-125" />
           </button>
