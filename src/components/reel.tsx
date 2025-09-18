@@ -10,8 +10,8 @@ const Reel = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
-        <div className="absolute inset-0 z-10 animate-spin-slow rounded-full backdrop-blur-sm bg-white/5">
+      <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px]">
+        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full backdrop-blur-sm bg-white/5">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/9aee124131edd2d8fff23f985d2d36e42538a1ef/round%20with%20text-01.svg"
             alt="Watch showreel text"
@@ -20,7 +20,7 @@ const Reel = () => {
           />
         </div>
 
-        <div className="relative h-2/5 w-2/5 overflow-hidden rounded-full shadow-2xl group">
+        <div className="relative h-1/3 w-1/3 overflow-hidden rounded-full shadow-2xl group">
           <video
             className="absolute inset-0 h-full w-full object-cover rounded-full"
             src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
