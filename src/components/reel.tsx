@@ -12,7 +12,7 @@ const Reel = () => {
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
         <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 z-10 animate-spin-slow p-2">
+        <div className="absolute inset-0 z-10 animate-spin-slow p-8">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
             alt="Watch showreel text"
@@ -47,14 +47,7 @@ const Reel = () => {
       <DialogOverlay className="bg-white/30 backdrop-blur-sm" />
       <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw] grid place-items-center">
         <div className="relative w-full h-full aspect-video">
-          <iframe
-            src="https://player.vimeo.com/video/1119668489?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            allowFullScreen
-            className="absolute top-0 left-0 w-full h-full"
-            title="Gopichand Product Designer | Showreel"
-          ></iframe>
+          <div style={{padding:'56.25% 0 0 0',position:'relative'}}><iframe src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} title="Gopichand Product Designer | Showreel"></iframe></div>
         </div>
       </DialogContent>
     </Dialog>
