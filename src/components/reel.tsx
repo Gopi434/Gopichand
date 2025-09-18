@@ -18,7 +18,7 @@ const Reel = () => {
     // borderImage: "linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)) 1",
   }}
 >
-        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full backdrop-blur-md bg-white/5 ">
+        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/e2f8d9169d9d74b0aaceab0e0307535000917302/stamp.svg"
             alt="Watch showreel text"
