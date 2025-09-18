@@ -46,7 +46,7 @@ const Reel = () => {
         </DialogTrigger>
       </div>
 
-      <DialogOverlay className="bg-white/10" />
+      <DialogOverlay className="bg-white/30 backdrop-blur-sm" />
       <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw] grid place-items-center">
         <div className="relative w-full h-full aspect-video">
           <iframe
