@@ -11,23 +11,19 @@ const Reel = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px]">
-        {/* Blurred background layer */}
-        <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm"></div>
-
-        {/* Main content container */}
         <div className="relative h-full w-full">
-          <div className="absolute inset-0 z-10 animate-spin-slow p-8">
+          <div className="absolute inset-0 z-10 animate-spin-slow rounded-full backdrop-blur-sm bg-white/5">
             <Image
-              src="https://raw.githubusercontent.com/Gopi434/Media/e46057285648f43e82da418a13e52d48c997e521/text-ring.svg"
+              src="https://raw.githubusercontent.com/Gopi434/Media/9aee124131edd2d8fff23f985d2d36e42538a1ef/round%20with%20text-01.svg"
               alt="Watch showreel text"
               fill
               className="object-contain"
             />
           </div>
 
-          <div className="relative h-full w-full overflow-hidden rounded-full shadow-2xl group">
+          <div className="relative h-full w-full overflow-hidden rounded-full shadow-2xl group p-6">
             <video
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover rounded-full"
               src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
               autoPlay
               loop
@@ -35,7 +31,6 @@ const Reel = () => {
               playsInline
               aria-label="Showreel video preview"
             />
-            <div className="absolute inset-0 rounded-full border-[2.5rem] border-background"></div>
           </div>
 
           <DialogTrigger asChild>
