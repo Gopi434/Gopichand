@@ -37,7 +37,7 @@ export default function Home() {
         <Button asChild variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
           <Link href="https://www.behance.net" target="_blank">
             <BehanceIcon className="h-5 w-5 mr-2" />
-            Explore on Behance
+            Portfolio
           </Link>
         </Button>
       </footer>
