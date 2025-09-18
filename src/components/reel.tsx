@@ -10,17 +10,23 @@ const Reel = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-     <div
-  className="relative flex h-[140px] w-[140px] items-center justify-center 
-             sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
-             border-[2px] rounded-full"
-  style={{
-    // borderImage: "linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)) 1",
-  }}
->
+      <div
+        className="relative flex h-[140px] w-[140px] items-center justify-center 
+                   sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
+                   rounded-full"
+      >
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/border.svg"
+            alt="Showreel border"
+            fill
+            className="object-contain"
+          />
+        </div>
+
         <div className="absolute inset-0 z-1 animate-spin-slow rounded-full">
           <Image
-            src="https://raw.githubusercontent.com/Gopi434/Media/e2f8d9169d9d74b0aaceab0e0307535000917302/stamp.svg"
+            src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
             alt="Watch showreel text"
             fill
             className="object-contain"
@@ -42,7 +48,7 @@ const Reel = () => {
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-black text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
+            className="group absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-black/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
           >
             <Play className="ml-1 h-8 w-8 fill-white stroke-none transition-transform duration-300 group-hover:scale-125" />
           </button>
