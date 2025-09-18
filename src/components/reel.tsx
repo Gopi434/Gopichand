@@ -1,7 +1,7 @@
 "use client";
 
 import { Play } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogOverlay, DialogTrigger } from '@/components/ui/dialog';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -46,7 +46,8 @@ const Reel = () => {
         </DialogTrigger>
       </div>
 
-      <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw]">
+      <DialogOverlay className="bg-white/10" />
+      <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw] grid place-items-center">
         <div className="relative w-full h-full aspect-video">
           <iframe
             src="https://player.vimeo.com/video/1119032332?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
