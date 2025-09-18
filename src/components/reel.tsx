@@ -10,19 +10,26 @@ const Reel = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <div className="relative flex h-[140px] w-[140px] items-center justify-center sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px]">
-        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full backdrop-blur-sm bg-white/5">
+     <div
+  className="relative flex h-[140px] w-[140px] items-center justify-center 
+             sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
+             border-[2px] rounded-full"
+  style={{
+    // borderImage: "linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)) 1",
+  }}
+>
+        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full backdrop-blur-md bg-white/5 ">
           <Image
-            src="https://raw.githubusercontent.com/Gopi434/Media/9aee124131edd2d8fff23f985d2d36e42538a1ef/round%20with%20text-01.svg"
+            src="https://raw.githubusercontent.com/Gopi434/Media/e2f8d9169d9d74b0aaceab0e0307535000917302/stamp.svg"
             alt="Watch showreel text"
             fill
             className="object-contain"
           />
         </div>
 
-        <div className="relative h-1/3 w-1/3 overflow-hidden rounded-full shadow-2xl group">
+        <div className="relative h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
           <video
-            className="absolute inset-0 h-full w-full object-cover rounded-full"
+            className="absolute inset-0 h-full w-full object-cover rounded-full p-3"
             src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
             autoPlay
             loop
