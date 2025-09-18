@@ -32,7 +32,7 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
         </div>
 
         {/* Layer 2: Spinning Stamp */}
-        <div className="absolute inset-0 z-10  animate-spin-slow">
+        <div className="absolute inset-0 z-10 animate-spin-slow">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
             alt="Watch showreel text"
@@ -40,7 +40,7 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
             className="object-contain"
           />
         </div>
-
+        
         {/* Layer 3: Video Preview */}
         <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
           <video
@@ -66,18 +66,16 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
       </div>
 
       <DialogOverlay className="bg-white/30 backdrop-blur-sm" />
-      <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw] grid place-items-center">
-        <div className="relative w-full h-full aspect-video">
-          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-            <iframe
-              src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              title="Gopichand Product Designer | Showreel"
-            ></iframe>
-          </div>
+      <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center">
+        <div className="relative w-[80vw] h-auto aspect-video">
+          <iframe
+            src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            style={{ width: '100%', height: '100%' }}
+            title="Gopichand Product Designer | Showreel"
+          ></iframe>
         </div>
       </DialogContent>
     </Dialog>
