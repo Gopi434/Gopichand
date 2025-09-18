@@ -50,12 +50,12 @@ const Reel = () => {
       <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw] grid place-items-center">
         <div className="relative w-full h-full aspect-video">
           <iframe
-            src="https://player.vimeo.com/video/1119032332?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+            src="https://player.vimeo.com/video/1119668489?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
             allowFullScreen
             className="absolute top-0 left-0 w-full h-full"
-            title="Gopichand | Product Designer | Showreel"
+            title="Gopichand Product Designer | Showreel"
           ></iframe>
         </div>
       </DialogContent>
