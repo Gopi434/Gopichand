@@ -10,20 +10,23 @@ export default function Home() {
       <AnimatedGridBackground />
 
       <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
+       
+      <Link href="https://www.behance.net/gopichandtalluri" target="_blank"> 
         <Image
           src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
-          alt="ReelVerse Logo"
+          alt="Gopichand Logo"
           width={250}
           height={135}
         />
+        </Link>
       </header>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
         <Reel />
       </div>
 
-      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[2%]">
-        <Button asChild variant="default" className="h-12 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
+      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%]">
+        <Button asChild variant="default" className="h-12 px-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
           <Link href="https://www.behance.net/gopichandtalluri" target="_blank" className="gap-1">
             <Image 
               src="https://raw.githubusercontent.com/Gopi434/Media/9a124b8514e80d33dd060d8168628d072e330573/behance%20icon.svg"
@@ -31,7 +34,7 @@ export default function Home() {
               width={35}
               height={20}
             />
-            Portfolio
+            <span className="mr-5">Portfolio</span>
           </Link>
         </Button>
       </footer>

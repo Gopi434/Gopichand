@@ -46,14 +46,17 @@ const Reel = () => {
         </DialogTrigger>
       </div>
 
-      <DialogContent className="h-dvh w-dvh max-w-full p-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw]">
-        <video
-          className="h-full w-full object-contain"
-          src="https://videos.pexels.com/video-files/3209828/3209828-hd_1280_720_30fps.mp4"
-          controls
-          autoPlay
-          aria-label="Showreel video"
-        />
+      <DialogContent className="h-auto w-auto max-w-full p-0 bg-transparent border-0 sm:h-[80vh] sm:w-[80vw] sm:max-w-[80vw]">
+        <div className="relative w-full h-full aspect-video">
+          <iframe
+            src="https://player.vimeo.com/video/1119032332?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full"
+            title="Gopichand | Product Designer | Showreel"
+          ></iframe>
+        </div>
       </DialogContent>
     </Dialog>
   );
