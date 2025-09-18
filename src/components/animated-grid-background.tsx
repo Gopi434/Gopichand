@@ -65,7 +65,7 @@ const SpotlightEffect = () => {
 
     return (
         <div
-            className="absolute inset-0 opacity-40"
+            className="absolute inset-0 opacity-20"
             style={{
                 maskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
                 WebkitMaskImage: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
@@ -79,7 +79,7 @@ const SpotlightEffect = () => {
 const AnimatedGridBackground = () => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         <Grid grayscale />
       </div>
       <SpotlightEffect />
