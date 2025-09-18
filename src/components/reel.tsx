@@ -15,6 +15,7 @@ const Reel = () => {
                    sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
                    rounded-full"
       >
+        {/* Layer 1: Static Border */}
         <div className="absolute inset-0 z-0">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/border.svg"
@@ -24,7 +25,8 @@ const Reel = () => {
           />
         </div>
 
-        <div className="absolute inset-0 z-1 animate-spin-slow rounded-full">
+        {/* Layer 2: Spinning Stamp */}
+        <div className="absolute inset-0 z-10 animate-spin-slow">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
             alt="Watch showreel text"
@@ -33,7 +35,8 @@ const Reel = () => {
           />
         </div>
 
-        <div className="relative h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
+        {/* Layer 3: Video Preview */}
+        <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
           <video
             className="absolute inset-0 h-full w-full object-cover rounded-full p-3"
             src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
@@ -45,10 +48,11 @@ const Reel = () => {
           />
         </div>
 
+        {/* Layer 4: Play Button */}
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-black/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
+            className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-black/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
           >
             <Play className="ml-1 h-8 w-8 fill-white stroke-none transition-transform duration-300 group-hover:scale-125" />
           </button>
