@@ -51,7 +51,7 @@ const Grid = ({ grayscale }: { grayscale?: boolean }) => {
 };
 
 const SpotlightEffect = ({ isReelHovered }: { isReelHovered: boolean }) => {
-    const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
@@ -63,15 +63,15 @@ const SpotlightEffect = ({ isReelHovered }: { isReelHovered: boolean }) => {
         };
     }, []);
 
-    const xPos = isReelHovered ? -1000 : mousePosition.x;
-    const yPos = isReelHovered ? -1000 : mousePosition.y;
-
     return (
         <div
-            className="absolute inset-0 opacity-80"
+            className={cn(
+                "absolute inset-0 transition-opacity duration-500 ease-in-out",
+                isReelHovered ? 'opacity-0' : 'opacity-80'
+            )}
             style={{
-                maskImage: `radial-gradient(circle 250px at ${xPos}px ${yPos}px, black 25%, transparent 100%)`,
-                WebkitMaskImage: `radial-gradient(circle 250px at ${xPos}px ${yPos}px, black 25%, transparent 100%)`,
+                maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
+                WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
             }}
         >
             <Grid />
