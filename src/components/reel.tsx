@@ -2,10 +2,14 @@
 
 import { Play } from 'lucide-react';
 import { Dialog, DialogContent, DialogOverlay, DialogTrigger } from '@/components/ui/dialog';
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 
-const Reel = () => {
+interface ReelProps {
+  setIsReelHovered: Dispatch<SetStateAction<boolean>>;
+}
+
+const Reel = ({ setIsReelHovered }: ReelProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -14,6 +18,8 @@ const Reel = () => {
         className="relative flex h-[140px] w-[140px] items-center justify-center 
                    sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
                    rounded-full"
+        onMouseEnter={() => setIsReelHovered(true)}
+        onMouseLeave={() => setIsReelHovered(false)}
       >
         {/* Layer 1: Static Border */}
         <div className="absolute inset-0 z-0">

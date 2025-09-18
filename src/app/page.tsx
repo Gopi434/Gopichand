@@ -27,12 +27,8 @@ export default function Home() {
         </Link>
       </header>
 
-      <div 
-        className="relative z-10 flex h-full w-full items-center justify-center"
-        onMouseEnter={() => setIsReelHovered(true)}
-        onMouseLeave={() => setIsReelHovered(false)}
-      >
-        <Reel />
+      <div className="relative z-10 flex h-full w-full items-center justify-center">
+        <Reel setIsReelHovered={setIsReelHovered} />
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%] opacity-10">
