@@ -2,7 +2,7 @@
 
 import { Play } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger, DialogPortal, DialogOverlay } from '@/components/ui/dialog';
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -14,48 +14,6 @@ interface ReelProps {
 }
 
 const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: ReelProps) => {
-  const playerRef = useRef(null);
-  const playerInstance = useRef<any>(null);
-
-
-  useEffect(() => {
-    if (isModalOpen || !(window as any).Vimeo?.Player) return;
-  
-    if (playerRef.current) {
-      if (!playerInstance.current) {
-        playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
-        const player = playerInstance.current;
-  
-        player.ready().then(() => {
-          player.setCurrentTime(37);
-
-          const onTimeUpdate = (data: { seconds: number }) => {
-            if (data.seconds >= 44) {
-              player.setCurrentTime(37);
-            }
-          };
-    
-          player.on('timeupdate', onTimeUpdate);
-        });
-      }
-  
-      const player = playerInstance.current;
-      if (player) {
-        player.ready().then(() => {
-          if (isReelHovered) {
-            player.pause();
-          } else {
-            player.getPaused().then((paused: boolean) => {
-              if (paused) {
-                player.play();
-              }
-            });
-          }
-        });
-      }
-    }
-  }, [isModalOpen, isReelHovered]);
-
 
   return (
     <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
@@ -90,8 +48,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
           <div className="absolute inset-0 h-full w-full overflow-hidden rounded-full">
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
-                ref={playerRef}
-                src="https://player.vimeo.com/video/1119668489?background=1&badge=0&autopause=0&player_id=0&app_id=58479"
+                src="https://player.vimeo.com/video/1119668489?background=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
