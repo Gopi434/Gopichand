@@ -46,15 +46,17 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         </div>
         
         <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
-          <video
-            className="absolute inset-0 h-full w-full object-cover rounded-full p-3"
-            src="https://silver.agency/wp-content/uploads/2022/09/100852_Silver2022Showreel_LoopWebBanner_15s_V15_2-5.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            aria-label="Showreel video preview"
-          />
+          <div className="absolute inset-0 h-full w-full rounded-full p-3 overflow-hidden">
+            <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
+              <iframe 
+                src="https://player.vimeo.com/video/1119668489?background=1&autoplay=1&loop=1&byline=0&title=0"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
+                title="Gopichand Product Designer | Showreel Preview">
+              </iframe>
+            </div>
+          </div>
         </div>
 
         <DialogTrigger asChild>
@@ -81,7 +83,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
               src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
+              referrerPolicy="strict-origin-when-cross-origin" d
               style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
               title="Gopichand Product Designer | Showreel">
             </iframe>
