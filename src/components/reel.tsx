@@ -24,7 +24,6 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
         const player = playerInstance.current;
         player.ready().then(() => {
           player.setPlaybackRate(3);
-          player.play();
         });
       }
 
