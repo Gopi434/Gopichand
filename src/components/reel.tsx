@@ -21,7 +21,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
 
 
   useEffect(() => {
-    if (isModalOpen) return;
+    if (isModalOpen || !(window as any).Vimeo) return;
 
     if (playerRef.current) {
       if (!playerInstance.current) {
@@ -41,10 +41,12 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
       }
 
       const player = playerInstance.current;
-      if (isReelHovered) {
-        player.pause();
-      } else {
-        player.play();
+      if (player) {
+        if (isReelHovered) {
+          player.pause();
+        } else {
+          player.play();
+        }
       }
     }
   }, [isModalOpen, isReelHovered]);
