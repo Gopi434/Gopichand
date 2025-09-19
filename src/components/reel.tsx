@@ -26,28 +26,32 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
         playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
         const player = playerInstance.current;
   
-        player.setCurrentTime(37);
-  
-        const onTimeUpdate = (data: { seconds: number }) => {
-          if (data.seconds >= 44) {
-            player.setCurrentTime(37);
-          }
-        };
-  
-        player.on('timeupdate', onTimeUpdate);
+        player.ready().then(() => {
+          player.setCurrentTime(37);
+
+          const onTimeUpdate = (data: { seconds: number }) => {
+            if (data.seconds >= 44) {
+              player.setCurrentTime(37);
+            }
+          };
+    
+          player.on('timeupdate', onTimeUpdate);
+        });
       }
   
       const player = playerInstance.current;
       if (player) {
-        if (isReelHovered) {
-          player.pause();
-        } else {
-          player.getPaused().then((paused: boolean) => {
-            if (paused) {
-              player.play();
-            }
-          });
-        }
+        player.ready().then(() => {
+          if (isReelHovered) {
+            player.pause();
+          } else {
+            player.getPaused().then((paused: boolean) => {
+              if (paused) {
+                player.play();
+              }
+            });
+          }
+        });
       }
     }
   }, [isModalOpen, isReelHovered]);
@@ -87,7 +91,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
                 ref={playerRef}
-                src="https://player.vimeo.com/video/1119668489?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
+                src="https://player.vimeo.com/video/1119668489?background=1&badge=0&autopause=0&player_id=0&app_id=58479"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
