@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -74,25 +75,23 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
     </div>
   );
 
-  const useMask = !isMobile && !isInteracted;
+  const useMask = !isMobile;
 
   return (
     <div
       className={cn(
-        "absolute inset-0 transition-opacity duration-500 ease-in-out before:absolute before:inset-0 before:content-[''] before:opacity-15",
-        (isReelHovered && !isMobile) ? 'opacity-0' : 'opacity-80',
-        isMobile && "opacity-10",
-        !useMask && 'pointer-events-none'
+        "absolute inset-0 transition-opacity duration-500 ease-in-out",
+        isMobile && "opacity-10"
       )}
       style={useMask ? {
-        maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
-        WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
+        maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`,
+        WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`,
       }: {}}
     >
-      <div className="absolute inset-0 -z-10 opacity-15">
+      <div className="absolute inset-0 -z-10 opacity-10">
         {gridContent(true)}
       </div>
-      <div className="pointer-events-none">
+      <div className={cn("pointer-events-none", isReelHovered && !isMobile && "opacity-0")}>
         {gridContent(false)}
       </div>
     </div>
