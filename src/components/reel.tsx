@@ -1,10 +1,12 @@
 "use client";
 
-import { Play } from 'lucide-react';
-import { Dialog, DialogContent, DialogOverlay, DialogTrigger } from '@/components/ui/dialog';
+import { Play, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogPortal } from '@/components/ui/dialog';
 import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import * as DialogPrimitive from "@radix-ui/react-dialog"
+
 
 interface ReelProps {
   setIsReelHovered: Dispatch<SetStateAction<boolean>>;
@@ -64,20 +66,27 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
           </button>
         </DialogTrigger>
       </div>
-
-      <DialogOverlay className="bg-white/30" />
-      <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center">
-        <div className="relative w-[80vw] h-auto aspect-video">
-          <iframe
-            src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            style={{ width: '100%', height: '100%' }}
-            title="Gopichand Product Designer | Showreel"
-          ></iframe>
-        </div>
-      </DialogContent>
+      
+      <DialogPortal>
+         <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-white/30" />
+         <DialogClose className="fixed inset-0 z-40" />
+        <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <X className="h-8 w-8" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          <div className="relative w-[80vw] h-auto aspect-video">
+            <iframe
+              src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              style={{ width: '100%', height: '100%' }}
+              title="Gopichand Product Designer | Showreel"
+            ></iframe>
+          </div>
+        </DialogContent>
+      </DialogPortal>
     </Dialog>
   );
 };
