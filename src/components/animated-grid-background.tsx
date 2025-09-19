@@ -45,7 +45,7 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
           )}
         >
           {[...columnImages, ...columnImages].map((image, imgIndex) => (
-            <Link href="https://www.behance.net/gopichandtalluri" target="_blank" key={`${image.id}-${imgIndex}`} className="cursor-pointer">
+            <Link href="https://www.behance.net/gopichandtalluri" target="_blank" key={`${image.id}-${imgIndex}`} className="cursor-pointer pointer-events-auto">
               <div className="relative h-[324px] w-full shrink-0">
                 <Image
                   src={image.imageUrl}
@@ -67,7 +67,7 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
   return (
     <div
       className={cn(
-        "absolute inset-0 transition-opacity duration-500 ease-in-out pointer-events-auto before:absolute before:inset-0 before:content-[''] before:opacity-15",
+        "absolute inset-0 transition-opacity duration-500 ease-in-out pointer-events-none before:absolute before:inset-0 before:content-[''] before:opacity-15",
         isReelHovered ? 'opacity-0' : 'opacity-80'
       )}
       style={{
@@ -86,7 +86,7 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
 
 const AnimatedGridBackground = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
   return (
-    <div className="absolute pointer-events-none inset-0 z-0 h-full w-full overflow-hidden">
+    <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
         <Grid isReelHovered={isReelHovered} isModalOpen={isModalOpen} />
     </div>
   );
