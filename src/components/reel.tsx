@@ -2,7 +2,7 @@
 
 import { Play } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger, DialogPortal, DialogOverlay } from '@/components/ui/dialog';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -14,6 +14,30 @@ interface ReelProps {
 }
 
 const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: ReelProps) => {
+  const playerRef = useRef<HTMLIFrameElement>(null);
+  const playerInstance = useRef<any>(null);
+
+  useEffect(() => {
+    if (playerRef.current && (window as any).Vimeo) {
+      if (!playerInstance.current) {
+        playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
+        const player = playerInstance.current;
+        player.ready().then(() => {
+          player.setPlaybackRate(2);
+          player.play();
+        });
+      }
+
+      const player = playerInstance.current;
+      if (isReelHovered) {
+        player.pause();
+      } else {
+        if (!isModalOpen) {
+          player.play();
+        }
+      }
+    }
+  }, [isReelHovered, isModalOpen]);
 
   return (
     <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
@@ -48,6 +72,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
           <div className="absolute inset-0 h-full w-full overflow-hidden rounded-full">
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
+                ref={playerRef}
                 src="https://player.vimeo.com/video/1119668489?background=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
