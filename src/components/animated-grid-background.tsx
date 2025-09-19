@@ -5,9 +5,20 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useMemo, useState, useEffect } from 'react';
 
-const Grid = ({ grayscale, isPaused }: { grayscale?: boolean, isPaused?: boolean }) => {
+const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+  
   if (!images.length) return null;
 
   const columns = [
@@ -19,15 +30,15 @@ const Grid = ({ grayscale, isPaused }: { grayscale?: boolean, isPaused?: boolean
     images.slice(20, 24),
   ];
 
-  return (
-    <div className={cn("grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", grayscale && "grayscale")}>
+  const gridContent = (isGrayscale = false) => (
+    <div className={cn("grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", isGrayscale && "grayscale")}>
       {columns.map((columnImages, colIndex) => (
         <div
           key={colIndex}
           className={cn(
             'flex flex-col gap-4',
             colIndex % 2 === 0 ? 'animate-slide-up' : 'animate-slide-down',
-            isPaused && '[animation-play-state:paused]',
+            isModalOpen && '[animation-play-state:paused]',
             colIndex >= 4 ? 'hidden lg:flex' : '',
             colIndex >= 2 ? 'hidden md:flex' : ''
           )}
@@ -49,44 +60,31 @@ const Grid = ({ grayscale, isPaused }: { grayscale?: boolean, isPaused?: boolean
       ))}
     </div>
   );
+
+  return (
+    <div
+      className={cn(
+        "absolute inset-0 transition-opacity duration-500 ease-in-out before:absolute before:inset-0 before:content-[''] before:opacity-15",
+        isReelHovered ? 'opacity-0' : 'opacity-80'
+      )}
+      style={{
+        maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
+        WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
+      }}
+    >
+      <div className="absolute inset-0 -z-10 opacity-15">
+        {gridContent(true)}
+      </div>
+      {gridContent(false)}
+    </div>
+  )
 };
 
-const SpotlightEffect = ({ isReelHovered }: { isReelHovered: boolean }) => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const handleMouseMove = (event: MouseEvent) => {
-            setMousePosition({ x: event.clientX, y: event.clientY });
-        };
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
-    return (
-        <div
-            className={cn(
-                "absolute inset-0 transition-opacity duration-500 ease-in-out",
-                isReelHovered ? 'opacity-0' : 'opacity-80'
-            )}
-            style={{
-                maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
-                WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
-            }}
-        >
-            <Grid />
-        </div>
-    )
-}
 
 const AnimatedGridBackground = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
-      <div className="absolute inset-0 opacity-15">
-        <Grid grayscale isPaused={isModalOpen} />
-      </div>
-      <SpotlightEffect isReelHovered={isReelHovered} />
+      <Grid isReelHovered={isReelHovered} isModalOpen={isModalOpen} />
     </div>
   );
 };
