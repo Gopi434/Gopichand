@@ -10,7 +10,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boolean, isModalOpen: boolean, isInteracted: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: -999, y: -999 });
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -41,8 +41,7 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
   const gridContent = (isGrayscale = false) => (
     <div className={cn(
         "grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", 
-        isGrayscale && "grayscale",
-        isMobile && "grayscale"
+        isGrayscale && "grayscale"
       )}>
       {columns.map((columnImages, colIndex) => (
         <div
@@ -74,25 +73,30 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
       ))}
     </div>
   );
-
-  const useMask = !isMobile;
-
-  return (
-    <div
-      className={cn(
-        "absolute inset-0 transition-opacity duration-500 ease-in-out",
-        isMobile && "opacity-10"
-      )}
-      style={useMask ? {
-        maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`,
-        WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`,
-      }: {}}
-    >
-      <div className="absolute inset-0 -z-10 opacity-10">
+  
+  if (isMobile) {
+    return (
+      <div className="absolute inset-0 opacity-10 grayscale">
         {gridContent(true)}
       </div>
-      <div className={cn("pointer-events-none", isReelHovered && !isMobile && "opacity-0")}>
+    );
+  }
+
+  return (
+    <div className="absolute inset-0">
+      {/* Color version (80% opacity) - revealed by the mask */}
+      <div className="absolute inset-0 opacity-80">
         {gridContent(false)}
+      </div>
+      {/* Grayscale version (10% opacity) - with the mask applied */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, transparent 0%, black 0%)`,
+          WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, transparent 0%, black 0%)`,
+        }}
+      >
+        {gridContent(true)}
       </div>
     </div>
   )
