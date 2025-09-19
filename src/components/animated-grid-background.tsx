@@ -41,7 +41,7 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
     <div className={cn(
         "grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", 
         isGrayscale && "grayscale",
-        (isInteracted && isMobile) && "grayscale"
+        isMobile && "grayscale"
       )}>
       {columns.map((columnImages, colIndex) => (
         <div
@@ -81,7 +81,7 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
       className={cn(
         "absolute inset-0 transition-opacity duration-500 ease-in-out before:absolute before:inset-0 before:content-[''] before:opacity-15",
         (isReelHovered && !isMobile) ? 'opacity-0' : 'opacity-80',
-        isMobile && "opacity-20",
+        isMobile && "opacity-10",
         !useMask && 'pointer-events-none'
       )}
       style={useMask ? {
