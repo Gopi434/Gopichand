@@ -70,7 +70,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
           />
         </div>
         <div className={cn(
-          "absolute inset-0 z-10 animate-spin-slow backdrop-blur-sm",
+          "absolute inset-0 z-10 animate-spin-slow",
           isModalOpen && "[animation-play-state:paused]"
         )}>
           <Image
