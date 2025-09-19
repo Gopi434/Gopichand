@@ -9,10 +9,11 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isReelHovered, setIsReelHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-background">
-      <AnimatedGridBackground isReelHovered={isReelHovered} />
+      <AnimatedGridBackground isReelHovered={isReelHovered} isModalOpen={isModalOpen} />
 
       <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
        
@@ -28,7 +29,7 @@ export default function Home() {
       </header>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <Reel setIsReelHovered={setIsReelHovered} />
+        <Reel setIsReelHovered={setIsReelHovered} setModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%] opacity-10">

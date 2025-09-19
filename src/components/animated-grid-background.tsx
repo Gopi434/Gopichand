@@ -5,7 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useMemo, useState, useEffect } from 'react';
 
-const Grid = ({ grayscale }: { grayscale?: boolean }) => {
+const Grid = ({ grayscale, isPaused }: { grayscale?: boolean, isPaused?: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
 
   if (!images.length) return null;
@@ -27,6 +27,7 @@ const Grid = ({ grayscale }: { grayscale?: boolean }) => {
           className={cn(
             'flex flex-col gap-4',
             colIndex % 2 === 0 ? 'animate-slide-up' : 'animate-slide-down',
+            isPaused && '[animation-play-state:paused]',
             colIndex >= 4 ? 'hidden lg:flex' : '',
             colIndex >= 2 ? 'hidden md:flex' : ''
           )}
@@ -79,11 +80,11 @@ const SpotlightEffect = ({ isReelHovered }: { isReelHovered: boolean }) => {
     )
 }
 
-const AnimatedGridBackground = ({ isReelHovered }: { isReelHovered: boolean }) => {
+const AnimatedGridBackground = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
       <div className="absolute inset-0 opacity-15">
-        <Grid grayscale />
+        <Grid grayscale isPaused={isModalOpen} />
       </div>
       <SpotlightEffect isReelHovered={isReelHovered} />
     </div>

@@ -20,9 +20,9 @@
     { "id": "18", "description": "Woman with VR headset", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/j-min.jpg", "imageHint": "woman vr" },
     { "id": "19", "description": "Network connections", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/kk-min.jpg", "imageHint": "network connections" },
     { "id": "20", "description": "Modern building facade", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/nb-min.jpg", "imageHint": "modern facade" },
-    { "id": "21", "description": "Mountain range sunset", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/l-min.jpg", "imageHint": "mountain sunset" },
-    { "id": "22", "description": "Abstract colorful shapes", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/m-min.jpg", "imageHint": "abstract shapes" },
-    { "id": "23", "description": "Close-up of eye", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/n-min.jpg", "imageHint": "eye macro" },
-    { "id": "24", "description": "Data visualization globe", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/o-min.jpg", "imageHint": "data globe" }
+    { "id": "21", "description": "Mountain range sunset", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/21.jpg", "imageHint": "mountain sunset" },
+    { "id": "22", "description": "Abstract colorful shapes", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/22.jpg", "imageHint": "abstract shapes" },
+    { "id": "23", "description": "Close-up of eye", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/23.jpg", "imageHint": "eye macro" },
+    { "id": "24", "description": "Data visualization globe", "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Works/24.jpg", "imageHint": "data globe" }
   ]
 }

@@ -2,18 +2,20 @@
 
 import { Play } from 'lucide-react';
 import { Dialog, DialogContent, DialogOverlay, DialogTrigger } from '@/components/ui/dialog';
-import { useState, Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface ReelProps {
   setIsReelHovered: Dispatch<SetStateAction<boolean>>;
+  setModalOpen: Dispatch<SetStateAction<boolean>>;
+  isModalOpen: boolean;
 }
 
-const Reel = ({ setIsReelHovered }: ReelProps) => {
-  const [open, setOpen] = useState(false);
+const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
       <div
         className="relative flex h-[140px] w-[140px] items-center justify-center 
                    sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
@@ -29,7 +31,10 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
             className="object-contain"
           />
         </div>
-        <div className="absolute inset-0 z-10 animate-spin-slow">
+        <div className={cn(
+          "absolute inset-0 z-10 animate-spin-slow",
+          isModalOpen && "[animation-play-state:paused]"
+        )}>
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
             alt="Watch showreel text"
