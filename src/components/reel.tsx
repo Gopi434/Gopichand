@@ -12,22 +12,21 @@ interface ReelProps {
   setIsReelHovered: Dispatch<SetStateAction<boolean>>;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
   isModalOpen: boolean;
+  isReelHovered: boolean;
 }
 
-const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
+const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: ReelProps) => {
   const playerRef = useRef(null);
+  const playerInstance = useRef<any>(null);
+
 
   useEffect(() => {
     if (isModalOpen) return;
 
-    const script = document.createElement('script');
-    script.src = "https://player.vimeo.com/api/player.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (playerRef.current) {
-        const player = new (window as any).Vimeo.Player(playerRef.current);
+    if (playerRef.current) {
+      if (!playerInstance.current) {
+        playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
+        const player = playerInstance.current;
         player.setCurrentTime(37).then(() => {
           player.play();
         });
@@ -39,17 +38,16 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         };
 
         player.on('timeupdate', onTimeUpdate);
-
-        return () => {
-          player.off('timeupdate', onTimeUpdate);
-        };
       }
-    };
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, [isModalOpen]);
+      const player = playerInstance.current;
+      if (isReelHovered) {
+        player.pause();
+      } else {
+        player.play();
+      }
+    }
+  }, [isModalOpen, isReelHovered]);
 
 
   return (
@@ -71,7 +69,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         </div>
         <div className={cn(
           "absolute inset-0 z-10 animate-spin-slow",
-          isModalOpen && "[animation-play-state:paused]"
+          (isModalOpen || isReelHovered) && "[animation-play-state:paused]"
         )}>
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"

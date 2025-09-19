@@ -29,7 +29,7 @@ export default function Home() {
       </header>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <Reel setIsReelHovered={setIsReelHovered} setModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+        <Reel setIsReelHovered={setIsReelHovered} setModalOpen={setIsModalOpen} isModalOpen={isModalOpen} isReelHovered={isReelHovered} />
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%] opacity-10">
