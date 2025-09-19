@@ -1,12 +1,10 @@
 "use client";
 
-import { Play, X } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogPortal } from '@/components/ui/dialog';
+import { Play } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger, DialogPortal, DialogOverlay } from '@/components/ui/dialog';
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import * as DialogPrimitive from "@radix-ui/react-dialog"
-
 
 interface ReelProps {
   setIsReelHovered: Dispatch<SetStateAction<boolean>>;
@@ -108,9 +106,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
       </div>
       
         <DialogPortal>
-          <DialogClose asChild>
-            <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-white/30" />
-          </DialogClose>
+          <DialogOverlay className="bg-black/80" />
           <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
             <div className="w-[80vw]" style={{padding:'56.25% 0 0 0',position:'relative'}}>
               <iframe 
