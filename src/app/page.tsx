@@ -15,14 +15,15 @@ export default function Home() {
     <main className="relative h-dvh w-full overflow-hidden bg-background">
       <AnimatedGridBackground isReelHovered={isReelHovered} isModalOpen={isModalOpen} />
 
-      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-8 pt-[3%]">
+      <header className="absolute top-0 left-0 right-0 z-20 flex justify-center p-4 md:p-8 md:pt-[3%]">
        
       <Link href="https://www.behance.net/gopichandtalluri" target="_blank"> 
         <Image
           src="https://raw.githubusercontent.com/Gopi434/Media/447711a7a9152b349829c59f6c84920051b9a755/Logo.svg"
           alt="Gopichand Logo"
-          width={250}
-          height={135}
+          width={180}
+          height={97}
+          className="md:w-[250px] md:h-[135px]"
         />
         </Link>
       </header>
@@ -31,7 +32,7 @@ export default function Home() {
         <Reel setIsReelHovered={setIsReelHovered} setModalOpen={setIsModalOpen} isModalOpen={isModalOpen} isReelHovered={isReelHovered} />
       </div>
 
-      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%]">
+      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center p-4 md:px-8 md:pt-8 md:pb-[4%]">
         <Button asChild variant="default" className="h-12 px-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
           <Link href="https://www.behance.net/gopichandtalluri" target="_blank" className="gap-1">
             <Image 
