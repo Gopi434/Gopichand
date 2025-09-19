@@ -20,26 +20,23 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
 
   useEffect(() => {
     if (isModalOpen || !(window as any).Vimeo?.Player) return;
-
+  
     if (playerRef.current) {
       if (!playerInstance.current) {
         playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
         const player = playerInstance.current;
-        player.setCurrentTime(37).then(() => {
-          if (!isReelHovered) {
-            player.play();
-          }
-        });
-
+  
+        player.setCurrentTime(37);
+  
         const onTimeUpdate = (data: { seconds: number }) => {
           if (data.seconds >= 44) {
             player.setCurrentTime(37);
           }
         };
-
+  
         player.on('timeupdate', onTimeUpdate);
       }
-
+  
       const player = playerInstance.current;
       if (player) {
         if (isReelHovered) {
@@ -90,7 +87,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
                 ref={playerRef}
-                src="https://player.vimeo.com/video/1119668489?background=1&autoplay=0&loop=1&byline=0&title=0"
+                src="https://player.vimeo.com/video/1119668489?background=1&autoplay=1&loop=1&byline=0&title=0"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
