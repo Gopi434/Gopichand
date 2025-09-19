@@ -23,7 +23,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
         playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
         const player = playerInstance.current;
         player.ready().then(() => {
-          player.setPlaybackRate(2);
+          player.setPlaybackRate(3);
           player.play();
         });
       }
