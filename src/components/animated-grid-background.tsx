@@ -16,7 +16,7 @@ const Grid = ({ grayscale }: { grayscale?: boolean }) => {
     images.slice(8, 12),
     images.slice(12, 16),
     images.slice(16, 20),
-    images.slice(0, 4),
+    images.slice(0, 4).reverse(),
   ];
 
   return (
