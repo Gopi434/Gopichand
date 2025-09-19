@@ -92,8 +92,8 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
       <div 
         className="absolute inset-0 opacity-80"
         style={{
-          maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
-          WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
+          maskImage: `radial-gradient(circle 500px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
+          WebkitMaskImage: `radial-gradient(circle 500px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
         }}
       >
         {gridContent(false)}
