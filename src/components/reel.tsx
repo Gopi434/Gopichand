@@ -87,11 +87,13 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
                 ref={playerRef}
-                src="https://player.vimeo.com/video/1119668489?background=1&autoplay=1&loop=1&byline=0&title=0"
+                src="https://player.vimeo.com/video/1119668489?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
                 frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
-                title="Gopichand Product Designer | Showreel Preview">
+                title="Gopichand Product Designer | Showreel Preview"
+                referrerPolicy="strict-origin-when-cross-origin"
+                >
               </iframe>
             </div>
           </div>
@@ -100,7 +102,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
+            className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)]"
           >
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50"></span>
             <Play className="ml-1 h-8 w-8 fill-black stroke-none transition-transform duration-300 group-hover:scale-125" />
