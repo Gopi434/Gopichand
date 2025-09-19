@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useMemo, useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
@@ -44,17 +45,19 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
           )}
         >
           {[...columnImages, ...columnImages].map((image, imgIndex) => (
-            <div key={`${image.id}-${imgIndex}`} className="relative h-[324px] w-full shrink-0">
-              <Image
-                src={image.imageUrl}
-                alt={image.description}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.6vw"
-                data-ai-hint={image.imageHint}
-                priority={imgIndex < 2 && colIndex < 2}
-              />
-            </div>
+            <Link href="https://www.behance.net/gopichandtalluri" target="_blank" key={`${image.id}-${imgIndex}`}>
+              <div className="relative h-[324px] w-full shrink-0">
+                <Image
+                  src={image.imageUrl}
+                  alt={image.description}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.6vw"
+                  data-ai-hint={image.imageHint}
+                  priority={imgIndex < 2 && colIndex < 2}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       ))}
