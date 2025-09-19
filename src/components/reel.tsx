@@ -99,17 +99,17 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
-            className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-black/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
+            className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
           >
-            <Play className="ml-1 h-8 w-8 fill-white stroke-none transition-transform duration-300 group-hover:scale-125" />
+            <Play className="ml-1 h-8 w-8 fill-black stroke-none transition-transform duration-300 group-hover:scale-125" />
           </button>
         </DialogTrigger>
       </div>
       
       <DialogPortal>
-         <DialogClose asChild>
+        <DialogClose asChild>
             <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-white/30" />
-         </DialogClose>
+        </DialogClose>
         <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
           <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
             <X className="h-8 w-8" />
