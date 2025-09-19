@@ -84,19 +84,19 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
 
   return (
     <div className="absolute inset-0">
-      {/* Color version (80% opacity) - revealed by the mask */}
-      <div className="absolute inset-0 opacity-80">
-        {gridContent(false)}
+      {/* Grayscale version (10% opacity) - This is the default background */}
+      <div className="absolute inset-0 opacity-10">
+        {gridContent(true)}
       </div>
-      {/* Grayscale version (10% opacity) - with the mask applied */}
+      {/* Color version (80% opacity) - This is revealed by the mask */}
       <div 
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-80"
         style={{
-          maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, transparent 0%, black 100%)`,
-          WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, transparent 0%, black 100%)`,
+          maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
+          WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 100%)`,
         }}
       >
-        {gridContent(true)}
+        {gridContent(false)}
       </div>
     </div>
   )
