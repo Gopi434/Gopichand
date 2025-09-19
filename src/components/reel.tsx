@@ -70,7 +70,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
           />
         </div>
         <div className={cn(
-          "absolute inset-0 z-10 animate-spin-slow",
+          "absolute inset-0 z-10 animate-spin-slow backdrop-blur-sm",
           isModalOpen && "[animation-play-state:paused]"
         )}>
           <Image
@@ -82,7 +82,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         </div>
         
         <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
-          <div className="absolute inset-0 h-full w-full rounded-full p-3 overflow-hidden">
+          <div className="absolute inset-0 h-full w-full overflow-hidden rounded-full">
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
               <iframe
                 ref={playerRef}
@@ -107,27 +107,27 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         </DialogTrigger>
       </div>
       
-      <DialogPortal>
-        <DialogClose asChild>
+        <DialogPortal>
+          <DialogClose asChild>
             <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-white/30" />
-        </DialogClose>
-        <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
-          <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-            <X className="h-8 w-8" />
-            <span className="sr-only">Close</span>
           </DialogClose>
-          <div className="w-[80vw]" style={{padding:'56.25% 0 0 0',position:'relative'}}>
-            <iframe 
-              src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
-              frameBorder="0" 
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
-              title="Gopichand Product Designer | Showreel">
-            </iframe>
-          </div>
-        </DialogContent>
-      </DialogPortal>
+          <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
+            <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+              <X className="h-8 w-8" />
+              <span className="sr-only">Close</span>
+            </DialogClose>
+            <div className="w-[80vw]" style={{padding:'56.25% 0 0 0',position:'relative'}}>
+              <iframe 
+                src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
+                title="Gopichand Product Designer | Showreel">
+              </iframe>
+            </div>
+          </DialogContent>
+        </DialogPortal>
     </Dialog>
   );
 };
