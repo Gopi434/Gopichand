@@ -7,13 +7,15 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface ReelProps {
-  setIsReelHovered: Dispatch<SetStateAction<boolean>>;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
   isModalOpen: boolean;
   isReelHovered: boolean;
+  isInteracted: boolean;
+  onInteractionStart: () => void;
+  onInteractionEnd: () => void;
 }
 
-const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: ReelProps) => {
+const Reel = ({ setModalOpen, isModalOpen, isReelHovered, isInteracted, onInteractionStart, onInteractionEnd }: ReelProps) => {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const playerInstance = useRef<any>(null);
 
@@ -41,11 +43,16 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
   return (
     <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
       <div
-        className="relative flex h-[140px] w-[140px] items-center justify-center 
-                   sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px] 
-                   rounded-full"
-        onMouseEnter={() => setIsReelHovered(true)}
-        onMouseLeave={() => setIsReelHovered(false)}
+        className={cn(
+          "relative flex h-[140px] w-[140px] items-center justify-center",
+          "sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px]",
+          "rounded-full transition-transform duration-500 ease-in-out",
+          isInteracted && "scale-110"
+        )}
+        onMouseEnter={onInteractionStart}
+        onMouseLeave={onInteractionEnd}
+        onTouchStart={onInteractionStart}
+        onTouchEnd={onInteractionEnd}
       >
         <div className="absolute inset-0 z-0">
           <Image
@@ -57,7 +64,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
         </div>
         <div className={cn(
           "absolute inset-0 z-10 animate-spin-slow",
-          (isModalOpen || isReelHovered) && "[animation-play-state:paused]"
+          (isModalOpen || isReelHovered || isInteracted) && "[animation-play-state:paused]"
         )}>
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"

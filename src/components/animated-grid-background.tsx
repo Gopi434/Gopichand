@@ -5,20 +5,26 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useIsMobile } from '@/hooks/use-mobile';
 
-const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
+const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boolean, isModalOpen: boolean, isInteracted: boolean }) => {
   const images = useMemo(() => PlaceHolderImages, []);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
-    window.addEventListener('mousemove', handleMouseMove);
+    if (!isMobile) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (!isMobile) {
+        window.removeEventListener('mousemove', handleMouseMove);
+      }
     };
-  }, []);
+  }, [isMobile]);
   
   if (!images.length) return null;
 
@@ -32,7 +38,11 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
   ];
 
   const gridContent = (isGrayscale = false) => (
-    <div className={cn("grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", isGrayscale && "grayscale")}>
+    <div className={cn(
+        "grid h-full w-full grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6", 
+        isGrayscale && "grayscale",
+        isInteracted && isMobile && "grayscale opacity-20"
+      )}>
       {columns.map((columnImages, colIndex) => (
         <div
           key={colIndex}
@@ -64,30 +74,36 @@ const Grid = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalO
     </div>
   );
 
+  const useMask = !isMobile && !isInteracted;
+
   return (
     <div
       className={cn(
-        "absolute inset-0 transition-opacity duration-500 ease-in-out pointer-events-none before:absolute before:inset-0 before:content-[''] before:opacity-15",
-        isReelHovered ? 'opacity-0' : 'opacity-80'
+        "absolute inset-0 transition-opacity duration-500 ease-in-out before:absolute before:inset-0 before:content-[''] before:opacity-15",
+        (isReelHovered && !isMobile) ? 'opacity-0' : 'opacity-80',
+        (isInteracted && isMobile) ? 'opacity-100' : '',
+        !useMask && 'pointer-events-none'
       )}
-      style={{
+      style={useMask ? {
         maskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
         WebkitMaskImage: `radial-gradient(circle 250px at ${mousePosition.x}px ${mousePosition.y}px, black 25%, transparent 100%)`,
-      }}
+      }: {}}
     >
       <div className="absolute inset-0 -z-10 opacity-15">
         {gridContent(true)}
       </div>
-      {gridContent(false)}
+      <div className="pointer-events-none">
+        {gridContent(false)}
+      </div>
     </div>
   )
 };
 
 
-const AnimatedGridBackground = ({ isReelHovered, isModalOpen }: { isReelHovered: boolean, isModalOpen: boolean }) => {
+const AnimatedGridBackground = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boolean, isModalOpen: boolean, isInteracted: boolean }) => {
   return (
     <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
-        <Grid isReelHovered={isReelHovered} isModalOpen={isModalOpen} />
+        <Grid isReelHovered={isReelHovered} isModalOpen={isModalOpen} isInteracted={isInteracted} />
     </div>
   );
 };
