@@ -21,7 +21,6 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
         onMouseEnter={() => setIsReelHovered(true)}
         onMouseLeave={() => setIsReelHovered(false)}
       >
-        {/* Layer 1: Static Border */}
         <div className="absolute inset-0 z-0">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/border.svg"
@@ -30,8 +29,6 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
             className="object-contain"
           />
         </div>
-
-        {/* Layer 2: Spinning Stamp */}
         <div className="absolute inset-0 z-10 animate-spin-slow">
           <Image
             src="https://raw.githubusercontent.com/Gopi434/Media/b6ab7369beb33d35b99360ba95fe27752abe4fbf/stamp.svg"
@@ -41,7 +38,6 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
           />
         </div>
         
-        {/* Layer 3: Video Preview */}
         <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
           <video
             className="absolute inset-0 h-full w-full object-cover rounded-full p-3"
@@ -54,7 +50,6 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
           />
         </div>
 
-        {/* Layer 4: Play Button */}
         <DialogTrigger asChild>
           <button
             aria-label="Play Showreel"
@@ -65,7 +60,7 @@ const Reel = ({ setIsReelHovered }: ReelProps) => {
         </DialogTrigger>
       </div>
 
-      <DialogOverlay className="bg-white/30 backdrop-blur-sm" />
+      <DialogOverlay className="bg-white/30" />
       <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center">
         <div className="relative w-[80vw] h-auto aspect-video">
           <iframe
