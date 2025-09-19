@@ -21,7 +21,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
 
 
   useEffect(() => {
-    if (isModalOpen || !(window as any).Vimeo) return;
+    if (isModalOpen || !(window as any).Vimeo?.Player) return;
 
     if (playerRef.current) {
       if (!playerInstance.current) {
@@ -112,10 +112,6 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen, isReelHovered }: Re
             <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-white/30" />
           </DialogClose>
           <DialogContent className="w-screen h-screen max-w-none sm:max-w-none p-0 bg-transparent border-0 flex items-center justify-center z-50">
-            <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
-              <X className="h-8 w-8" />
-              <span className="sr-only">Close</span>
-            </DialogClose>
             <div className="w-[80vw]" style={{padding:'56.25% 0 0 0',position:'relative'}}>
               <iframe 
                 src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
