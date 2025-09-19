@@ -2,7 +2,7 @@
 
 import { Play, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogPortal } from '@/components/ui/dialog';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import * as DialogPrimitive from "@radix-ui/react-dialog"
@@ -15,6 +15,42 @@ interface ReelProps {
 }
 
 const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
+  const playerRef = useRef(null);
+
+  useEffect(() => {
+    if (isModalOpen) return;
+
+    const script = document.createElement('script');
+    script.src = "https://player.vimeo.com/api/player.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (playerRef.current) {
+        const player = new (window as any).Vimeo.Player(playerRef.current);
+        player.setCurrentTime(37).then(() => {
+          player.play();
+        });
+
+        const onTimeUpdate = (data: { seconds: number }) => {
+          if (data.seconds >= 44) {
+            player.setCurrentTime(37);
+          }
+        };
+
+        player.on('timeupdate', onTimeUpdate);
+
+        return () => {
+          player.off('timeupdate', onTimeUpdate);
+        };
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [isModalOpen]);
+
 
   return (
     <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
@@ -48,7 +84,8 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
         <div className="relative z-20 h-2/3 w-2/3 overflow-hidden rounded-full shadow-2xl group">
           <div className="absolute inset-0 h-full w-full rounded-full p-3 overflow-hidden">
             <div style={{width:'300%', height:'100%', position:'relative', left: '-100%'}}>
-              <iframe 
+              <iframe
+                ref={playerRef}
                 src="https://player.vimeo.com/video/1119668489?background=1&autoplay=1&loop=1&byline=0&title=0"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
@@ -83,7 +120,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
               src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" d
+              referrerPolicy="strict-origin-when-cross-origin" 
               style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
               title="Gopichand Product Designer | Showreel">
             </iframe>
