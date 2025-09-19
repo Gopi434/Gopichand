@@ -76,15 +76,15 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
             <X className="h-8 w-8" />
             <span className="sr-only">Close</span>
           </DialogClose>
-          <div className="relative w-[80vw] h-auto aspect-video">
-            <iframe
-              src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              style={{ width: '100%', height: '100%' }}
-              title="Gopichand Product Designer | Showreel"
-            ></iframe>
+          <div className="w-[80vw]" style={{padding:'56.25% 0 0 0',position:'relative'}}>
+            <iframe 
+              src="https://player.vimeo.com/video/1119668489?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" 
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
+              title="Gopichand Product Designer | Showreel">
+            </iframe>
           </div>
         </DialogContent>
       </DialogPortal>
