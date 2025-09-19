@@ -100,8 +100,11 @@ export default {
           from: { transform: 'translateY(-50%)' },
           to: { transform: 'translateY(0)' },
         },
-        pulse: {
-          '50%': { transform: 'scale(1.1)' },
+        ping: {
+          '75%, 100%': {
+            transform: 'scale(1.5)',
+            opacity: '0',
+          },
         },
       },
       animation: {
@@ -110,7 +113,7 @@ export default {
         'spin-slow': 'spin-slow 40s linear infinite',
         'slide-up': 'slide-up 10s linear infinite',
         'slide-down': 'slide-down 10s linear infinite',
-        'pulse': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
     },
   },

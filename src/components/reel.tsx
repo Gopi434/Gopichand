@@ -101,6 +101,7 @@ const Reel = ({ setIsReelHovered, setModalOpen, isModalOpen }: ReelProps) => {
             aria-label="Play Showreel"
             className="group absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_10px_hsla(0,0%,100%,0.3)] backdrop-blur-sm"
           >
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50"></span>
             <Play className="ml-1 h-8 w-8 fill-black stroke-none transition-transform duration-300 group-hover:scale-125" />
           </button>
         </DialogTrigger>
