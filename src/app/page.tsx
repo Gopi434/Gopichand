@@ -23,7 +23,6 @@ export default function Home() {
           alt="Gopichand Logo"
           width={250}
           height={135}
-          className="opacity-10"
         />
         </Link>
       </header>
@@ -32,7 +31,7 @@ export default function Home() {
         <Reel setIsReelHovered={setIsReelHovered} setModalOpen={setIsModalOpen} isModalOpen={isModalOpen} isReelHovered={isReelHovered} />
       </div>
 
-      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%] opacity-10">
+      <footer className="absolute bottom-0 left-0 right-0 z-20 flex justify-center px-8 pt-8 pb-[4%]">
         <Button asChild variant="default" className="h-12 px-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
           <Link href="https://www.behance.net/gopichandtalluri" target="_blank" className="gap-1">
             <Image 
