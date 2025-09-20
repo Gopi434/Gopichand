@@ -26,9 +26,14 @@ const Reel = ({ setModalOpen, isModalOpen, isReelHovered, isInteracted, onIntera
         const player = playerInstance.current;
         player.ready().then(() => {
           player.setPlaybackRate(3);
+          player.play();
         });
       }
+    }
+  }, []);
 
+  useEffect(() => {
+    if (playerInstance.current) {
       const player = playerInstance.current;
       if (isReelHovered) {
         player.pause();
