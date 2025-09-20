@@ -44,8 +44,8 @@ const Reel = ({ setModalOpen, isModalOpen, isReelHovered, isInteracted, onIntera
     <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
       <div
         className={cn(
-          "relative flex h-[140px] w-[140px] items-center justify-center",
-          "sm:h-[200px] sm:w-[200px] md:h-[350px] md:w-[350px]",
+          "relative flex h-[280px] w-[280px] items-center justify-center",
+          "md:h-[350px] md:w-[350px]",
           "rounded-full transition-transform duration-500 ease-in-out",
           isInteracted && "scale-110"
         )}
