@@ -49,7 +49,7 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
           className={cn(
             'flex flex-col gap-4',
             colIndex % 2 === 0 ? 'animate-slide-up' : 'animate-slide-down',
-            isModalOpen && '[animation-play-state:paused]',
+            (isModalOpen || isReelHovered) && '[animation-play-state:paused]',
             colIndex >= 4 ? 'hidden lg:flex' : '',
             colIndex >= 2 ? 'hidden md:flex' : ''
           )}
@@ -84,16 +84,15 @@ const Grid = ({ isReelHovered, isModalOpen, isInteracted }: { isReelHovered: boo
 
   return (
     <div className="absolute inset-0">
-      {/* Grayscale version (10% opacity) - This is the default background */}
       <div className="absolute inset-0 opacity-10">
         {gridContent(true)}
       </div>
-      {/* Color version (80% opacity) - This is revealed by the mask */}
       <div 
-        className="absolute inset-0 opacity-80"
+        className="absolute inset-0 opacity-80 transition-all duration-300"
         style={{
           maskImage: `radial-gradient(circle 500px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
           WebkitMaskImage: `radial-gradient(circle 500px at ${mousePosition.x}px ${mousePosition.y}px, black 40%, transparent 40%)`,
+          opacity: isReelHovered ? 0 : 0.8,
         }}
       >
         {gridContent(false)}
