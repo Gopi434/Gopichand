@@ -20,29 +20,29 @@ const Reel = ({ setModalOpen, isModalOpen, isReelHovered, isInteracted, onIntera
   const playerInstance = useRef<any>(null);
 
   useEffect(() => {
-    if (!playerRef.current || !(window as any).Vimeo) {
-      return;
-    }
+    if (playerRef.current && (window as any).Vimeo) {
+      if (!playerInstance.current) {
+        playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
+        playerInstance.current.ready().then(() => {
+          if (playerInstance.current) {
+            playerInstance.current.setPlaybackRate(3);
+            // Autoplay only if not hovered and modal is not open initially
+            if (!isReelHovered && !isModalOpen) {
+              playerInstance.current.play();
+            }
+          }
+        });
+      }
 
-    if (!playerInstance.current) {
-      playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
-      playerInstance.current.ready().then(() => {
-        if (playerInstance.current) {
-          playerInstance.current.setPlaybackRate(3);
-          playerInstance.current.play();
-        }
-      });
-    }
-    
-    const player = playerInstance.current;
-
-    if (player) {
-      if (isReelHovered) {
-        player.pause();
-      } else {
-        if (!isModalOpen) {
-          player.play();
-        }
+      const player = playerInstance.current;
+      if (player) {
+        player.ready().then(() => {
+          if (isReelHovered) {
+            player.pause();
+          } else if (!isModalOpen) {
+            player.play();
+          }
+        });
       }
     }
   }, [isReelHovered, isModalOpen]);
