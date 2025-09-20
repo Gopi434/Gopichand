@@ -20,31 +20,26 @@ const Reel = ({ setModalOpen, isModalOpen, isReelHovered, isInteracted, onIntera
   const playerInstance = useRef<any>(null);
 
   useEffect(() => {
-    // Ensure window.Vimeo is available and we have a ref to the iframe
     if (!playerRef.current || !(window as any).Vimeo) {
       return;
     }
 
-    // Initialize the player only once
     if (!playerInstance.current) {
       playerInstance.current = new (window as any).Vimeo.Player(playerRef.current);
-      
-      // When the player is ready, set playback rate and play immediately
       playerInstance.current.ready().then(() => {
-        const player = playerInstance.current;
-        if (player) {
-          player.setPlaybackRate(3);
-          player.play();
+        if (playerInstance.current) {
+          playerInstance.current.setPlaybackRate(3);
+          playerInstance.current.play();
         }
       });
     }
-
+    
     const player = playerInstance.current;
+
     if (player) {
       if (isReelHovered) {
         player.pause();
       } else {
-        // If the modal is not open, it should be playing.
         if (!isModalOpen) {
           player.play();
         }
