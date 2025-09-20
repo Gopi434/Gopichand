@@ -36,7 +36,7 @@ export default function Home() {
       <AnimatedGridBackground isReelHovered={isReelHovered} isModalOpen={isModalOpen} isInteracted={isInteracted} />
 
       <header className={cn(
-        "absolute top-0 left-0 right-0 z-20 flex justify-center p-4 md:px-8 md:pt-4 transition-transform duration-500 ease-in-out",
+        "absolute top-0 left-0 right-0 z-20 flex justify-center px-4 pt-8 md:px-8 md:pt-4 transition-transform duration-500 ease-in-out",
         isMobile && isInteracted && "translate-y-8"
       )}>
        
@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       <footer className={cn(
-        "absolute bottom-0 left-0 right-0 z-20 flex justify-center p-4 md:px-8 md:pt-8 md:pb-[4%] transition-transform duration-500 ease-in-out",
+        "absolute bottom-0 left-0 right-0 z-20 flex justify-center px-4 pb-8 md:px-8 md:pt-8 md:pb-[4%] transition-transform duration-500 ease-in-out",
         isMobile && isInteracted && "-translate-y-8"
       )}>
         <Button asChild variant="default" className="h-12 px-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-base font-bold">
