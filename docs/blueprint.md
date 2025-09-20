@@ -1,4 +1,4 @@
-# **App Name**: Gopichand
+# **App Name**: Gopichand | Product Designer
 
 ## Core Features:
 
