@@ -33,15 +33,15 @@ export default function Header() {
             "absolute top-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out",
             scrolled ? "left-0" : "left-1/2 -translate-x-1/2"
           )}>
-            <div className="relative flex items-center h-10 w-40">
+            <div className="relative flex items-center h-20">
                 {/* Full Logo - Fades in on scroll */}
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
                   alt="Gopi Full Logo"
                   width={160}
-                  height={40}
+                  height={80}
                   className={cn(
-                    "absolute left-0 top-0 transition-opacity duration-500 ease-in-out",
+                    "absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out h-16 w-auto",
                     scrolled ? "opacity-100" : "opacity-0"
                   )}
                 />
@@ -49,10 +49,10 @@ export default function Header() {
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                   alt="Gopi Icon Logo"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                   className={cn(
-                    "transition-opacity duration-500 ease-in-out",
+                    "transition-opacity duration-500 ease-in-out h-16 w-16",
                     scrolled ? "opacity-0" : "opacity-100"
                   )}
                 />
