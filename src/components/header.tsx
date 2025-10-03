@@ -12,8 +12,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Trigger when user scrolls more than 300px
-      setScrolled(window.scrollY > 300);
+      // A larger scroll value to make the animation trigger feel more natural
+      setScrolled(window.scrollY > 150);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -27,34 +27,35 @@ export default function Header() {
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <div className={cn(
-          "flex items-center transition-all duration-500",
-          scrolled ? "justify-between h-16" : "justify-center h-24"
-        )}>
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
-              <div 
+        <div className="flex items-center justify-between h-20 transition-all duration-500">
+          
+          <div className={cn(
+            "flex-1 flex transition-all duration-500 ease-in-out",
+            scrolled ? 'justify-start' : 'justify-center'
+          )}>
+            <Link href="/" className="relative flex items-center h-10 w-40">
+              {/* Full Logo - Fades in on scroll */}
+              <Image 
+                src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
+                alt="Gopi Full Logo"
+                width={160}
+                height={40}
                 className={cn(
-                  "transition-all duration-500 ease-in-out",
-                   // When not scrolled, show a clipped version. When scrolled, show full logo.
-                  scrolled ? "w-10 h-10" : "w-80 h-20"
+                  "absolute inset-0 transition-opacity duration-500 ease-in-out",
+                  scrolled ? "opacity-100" : "opacity-0"
                 )}
-                style={{
-                  clipPath: scrolled ? 'inset(0 0 0 0)' : 'inset(0 80% 0 0)',
-                }}
-              >
-                <Image 
-                  src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
-                  alt="Gopi Logo"
-                  width={320}
-                  height={80}
-                  className={cn(
-                    "transition-all duration-500 ease-in-out",
-                     // Adjust position and scale on scroll
-                    scrolled ? "w-10 h-10" : "w-80 h-20"
-                  )}
-                />
-              </div>
+              />
+              {/* Icon Logo - Fades out on scroll */}
+              <Image 
+                src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
+                alt="Gopi Icon Logo"
+                width={40}
+                height={40}
+                className={cn(
+                  "absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out",
+                  scrolled ? "opacity-0 left-0 -translate-x-0" : "opacity-100"
+                )}
+              />
             </Link>
           </div>
           
