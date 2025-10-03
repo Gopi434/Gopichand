@@ -29,8 +29,8 @@ export default function ImpactSection() {
                   src={profileImage.imageUrl}
                   alt={profileImage.description}
                   data-ai-hint={profileImage.imageHint}
-                  width={56}
-                  height={56}
+                  width={64}
+                  height={64}
                   className="rounded-full object-cover"
                 />
               )}
