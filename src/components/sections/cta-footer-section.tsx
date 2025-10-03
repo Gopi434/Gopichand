@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Smartphone, Mail, Linkedin } from 'lucide-react';
-import { IconBehance, IconLogo } from '@/components/icons';
+import { IconBehance } from '@/components/icons';
 import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
 
 const contactLinks = [
   {
@@ -51,8 +52,13 @@ export default function CtaFooterSection() {
       <footer className="mt-20 py-6">
         <div className="container flex justify-center">
             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-muted-foreground">
-              <IconLogo className="h-8 w-8" />
-              <span className="font-headline">Gopi.</span>
+              <Image 
+                src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
+                alt="Gopi Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
             </Link>
         </div>
       </footer>
