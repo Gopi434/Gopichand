@@ -15,9 +15,9 @@ export default function HeroSection() {
 
   return (
     <>
-      <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
+      <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background -z-10" />
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 pt-24 sm:pt-32">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tighter text-foreground">
               Product Designer | Team Lead | Multidisciplinary
@@ -32,7 +32,7 @@ export default function HeroSection() {
                 </Link>
               </Button>
             </div>
-            <div className="w-full max-w-5xl pt-8">
+            <div className="w-full max-w-5xl pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
                   <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg hover:shadow-primary/20 transition-shadow">
