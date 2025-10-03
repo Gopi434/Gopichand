@@ -12,7 +12,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // A larger scroll value to make the animation trigger feel more natural
       setScrolled(window.scrollY > 350);
     };
     window.addEventListener('scroll', handleScroll);
@@ -33,7 +32,7 @@ export default function Header() {
             "flex-1 flex transition-all duration-500 ease-in-out",
             scrolled ? 'justify-start' : 'justify-center'
           )}>
-            <Link href="/" className="relative flex items-center h-10 w-40">
+            <Link href="/" className={cn("relative flex items-center h-10 transition-all duration-500 ease-in-out", scrolled ? 'w-40' : 'w-10')}>
               {/* Full Logo - Fades in on scroll */}
               <Image 
                 src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
@@ -52,8 +51,8 @@ export default function Header() {
                 width={40}
                 height={40}
                 className={cn(
-                  "absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out",
-                  scrolled ? "opacity-0 left-0 -translate-x-0" : "opacity-100"
+                  "transition-opacity duration-500 ease-in-out",
+                  scrolled ? "opacity-0" : "opacity-100"
                 )}
               />
             </Link>
