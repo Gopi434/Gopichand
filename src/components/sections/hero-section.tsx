@@ -18,7 +18,7 @@ export default function HeroSection() {
     <>
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background -z-10" />
-        <div className="container mx-auto px-4 md:px-6 pt-24 sm:pt-32">
+        <div className="container mx-auto px-4 md:px-6 pt-32 sm:pt-40">
           <div className="max-w-5xl mx-auto flex flex-col items-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
               Hi, This is Gopichand
@@ -27,8 +27,8 @@ export default function HeroSection() {
               A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pb-12">
-              <Button size="default" variant="default" asChild>
-                <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer" className="font-bold">
+              <Button size="default" variant="default" asChild className="font-bold">
+                <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image 
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
@@ -39,8 +39,8 @@ export default function HeroSection() {
                   Portfolio
                 </a>
               </Button>
-              <Button size="default" variant="secondary" asChild>
-                <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer" className="font-bold">
+              <Button size="default" variant="secondary" asChild className="font-bold">
+                <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer">
                   <Mail />
                   Mail me
                 </a>
