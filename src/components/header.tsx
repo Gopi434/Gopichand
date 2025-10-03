@@ -38,10 +38,10 @@ export default function Header() {
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
                   alt="Gopi Full Logo"
-                  width={160}
-                  height={80}
+                  width={240}
+                  height={240}
                   className={cn(
-                    "absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out h-16 w-auto",
+                    "absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out h-30 w-30",
                     scrolled ? "opacity-100" : "opacity-0"
                   )}
                 />
@@ -49,10 +49,10 @@ export default function Header() {
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                   alt="Gopi Icon Logo"
-                  width={80}
-                  height={80}
+                  width={240}
+                  height={240}
                   className={cn(
-                    "transition-opacity duration-500 ease-in-out h-16 w-16",
+                    "transition-opacity duration-500 ease-in-out h-30 w-30",
                     scrolled ? "opacity-0" : "opacity-100"
                   )}
                 />

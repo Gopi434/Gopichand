@@ -25,16 +25,16 @@ const designTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> 
   { name: "Illustrator", icon: IconIllustrator },
   { name: "After Effects", icon: IconAfterEffects },
   { name: "Premiere Pro", icon: IconMaya },
-  { name: "Usability Testing", icon: Users },
-  { name: "Design Systems", icon: Library },
-  { name: "Responsive Design", icon: TabletSmartphone },
-  { name: "Interaction Design", icon: MousePointerClick },
+  { name: "HTML", icon: Users },
+  { name: "CSS", icon: Library },
+  { name: "JavaScript", icon: TabletSmartphone },
+  { name: "jQuery", icon: MousePointerClick },
 ];
 
 const techTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> }[] = [
-  { name: "HTML", icon: CodeXml },
-  { name: "CSS", icon: Braces },
-  { name: "JavaScript", icon: Braces },
+  { name: "Bootstrap", icon: CodeXml },
+  { name: "Firebase Studio", icon: Braces },
+  { name: "Framer", icon: Braces },
   { name: "Autodesk Maya", icon: Database },
 ];
 
