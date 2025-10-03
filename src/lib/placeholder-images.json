@@ -9,8 +9,8 @@
     {
       "id": "hero-video-thumbnail",
       "description": "Video thumbnail for hero section showreel",
-      "imageUrl": "https://images.unsplash.com/photo-1574853079222-2636a68f0436?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHNob3dyZWVsJTIwdGh1bWJuYWlsfGVufDB8fHx8MTc1OTYyOTY2MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract showreel"
+      "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMG1vdGlvbiUyMGdyYXBoaWNzfGVufDB8fHx8MTc2MDE2NzY5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract motion graphics"
     },
     {
       "id": "work-paycio-mobile",
