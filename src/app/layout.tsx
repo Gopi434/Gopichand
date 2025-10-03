@@ -15,6 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+      <link rel="icon" href="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Fav_Light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+      <link rel="icon" href="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Fav_Dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />

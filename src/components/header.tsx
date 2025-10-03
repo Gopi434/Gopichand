@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { IconLogo } from '@/components/icons';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
@@ -27,7 +27,13 @@ export default function Header() {
         <div className="flex items-center justify-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
-              <IconLogo className="h-8 w-8" />
+              <Image 
+                src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
+                alt="Gopi Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="font-headline">Gopi.</span>
             </Link>
           </div>
