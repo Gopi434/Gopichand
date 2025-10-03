@@ -28,7 +28,7 @@ export default function HeroSection() {
     <>
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background -z-10" />
-        <div className="container mx-auto px-4 md:px-6 pt-32 sm:pt-40 max-w-5xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
               Hi, This is Gopichand
@@ -37,8 +37,7 @@ export default function HeroSection() {
               A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
             </p>
             <div className={cn(
-              "flex flex-col sm:flex-row gap-4 pb-12 transition-opacity duration-300",
-              scrolled ? "opacity-0" : "opacity-100"
+              "flex flex-col sm:flex-row gap-4 pb-12 transition-opacity duration-300"
             )}>
               <Button size="default" variant="default" asChild className="font-bold">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
