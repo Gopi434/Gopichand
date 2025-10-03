@@ -28,7 +28,7 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="default" variant="default" asChild>
-                <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer" className="font-bold">
                   <Image 
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
@@ -40,7 +40,7 @@ export default function HeroSection() {
                 </a>
               </Button>
               <Button size="default" variant="secondary" asChild>
-                <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer" className="font-bold">
                   <Mail />
                   Mail me
                 </a>
