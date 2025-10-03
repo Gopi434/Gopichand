@@ -7,6 +7,12 @@
       "imageHint": "profile portrait"
     },
     {
+      "id": "hero-video-thumbnail",
+      "description": "Video thumbnail for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1710359640426-10002e7b5841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaG93cmVlbCUyMHRodW1ibmFpbHxlbnwwfHx8fDE3NTk0OTMwODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "showreel thumbnail"
+    },
+    {
       "id": "work-paycio-mobile",
       "description": "Screenshot of Paycio Mobile App",
       "imageUrl": "https://images.unsplash.com/photo-1650959828226-f9d53a7c1f64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjBhcHAlMjBmaW50ZWNofGVufDB8fHx8MTc1OTQ4NjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
