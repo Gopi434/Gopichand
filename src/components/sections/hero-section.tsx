@@ -1,32 +1,45 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { PlayCircle } from 'lucide-react';
 import { Mail } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const videoThumbnail = PlaceHolderImages.find(img => img.id === 'hero-video-thumbnail');
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Trigger when user scrolls more than 50px to start the fade out
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background -z-10" />
-        <div className="container mx-auto px-4 md:px-6 pt-32 sm:pt-40">
-          <div className="max-w-5xl mx-auto flex flex-col items-center space-y-6">
+        <div className="container mx-auto px-4 md:px-6 pt-32 sm:pt-40 max-w-5xl">
+          <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
               Hi, This is Gopichand
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
               A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pb-12">
+            <div className={cn(
+              "flex flex-col sm:flex-row gap-4 pb-12 transition-opacity duration-300",
+              scrolled ? "opacity-0" : "opacity-100"
+            )}>
               <Button size="default" variant="default" asChild className="font-bold">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image 

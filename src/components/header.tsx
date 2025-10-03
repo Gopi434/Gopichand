@@ -12,7 +12,8 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Trigger animation slightly later
+      // Trigger when user scrolls more than 300px
+      setScrolled(window.scrollY > 300);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -34,19 +35,23 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
               <div 
                 className={cn(
-                  "transition-all duration-500 ease-in-out overflow-hidden",
-                  scrolled ? "h-10 w-10" : "h-20 w-80"
+                  "transition-all duration-500 ease-in-out",
+                   // When not scrolled, show a clipped version. When scrolled, show full logo.
+                  scrolled ? "w-10 h-10" : "w-80 h-20"
                 )}
-                style={{ clipPath: scrolled ? 'inset(0 0 0 0)' : 'inset(0 0 80% 0)' }}
+                style={{
+                  clipPath: scrolled ? 'inset(0 0 0 0)' : 'inset(0 80% 0 0)',
+                }}
               >
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
                   alt="Gopi Logo"
-                  width={scrolled ? 40 : 320}
-                  height={scrolled ? 40 : 80}
+                  width={320}
+                  height={80}
                   className={cn(
                     "transition-all duration-500 ease-in-out",
-                    scrolled ? "h-10 w-10" : "h-80 w-80 p-10 -translate-y-1/2",
+                     // Adjust position and scale on scroll
+                    scrolled ? "w-10 h-10" : "w-80 h-20"
                   )}
                 />
               </div>
