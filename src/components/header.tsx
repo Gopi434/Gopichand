@@ -41,18 +41,19 @@ export default function Header() {
                   width={240}
                   height={240}
                   className={cn(
-                    "absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out h-30 w-30",
+                    "absolute left-0 top-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out h-auto",
                     scrolled ? "opacity-100" : "opacity-0"
                   )}
+                  style={{ width: '240px' }}
                 />
                 {/* Icon Logo - Fades out on scroll */}
                 <Image 
                   src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                   alt="Gopi Icon Logo"
-                  width={240}
-                  height={240}
+                  width={55}
+                  height={55}
                   className={cn(
-                    "transition-opacity duration-500 ease-in-out h-30 w-30",
+                    "transition-opacity duration-500 ease-in-out",
                     scrolled ? "opacity-0" : "opacity-100"
                   )}
                 />
