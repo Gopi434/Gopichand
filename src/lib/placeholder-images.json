@@ -41,6 +41,30 @@
       "description": "Still from Motion/3D work",
       "imageUrl": "https://images.unsplash.com/photo-1707567019592-a05a41cc0b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHwzZCUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTQ4NjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "3d abstract"
+    },
+    {
+      "id": "client-fintech",
+      "description": "Fintech company logo",
+      "imageUrl": "https://images.unsplash.com/photo-1626756826756-03792bd8fae8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaW50ZWNoJTIwbG9nb3xlbnwwfHx8fDE3NTkzOTg5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fintech logo"
+    },
+    {
+      "id": "client-web3",
+      "description": "Web3 startup logo",
+      "imageUrl": "https://images.unsplash.com/photo-1669220235918-04cbf9e054b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWIzJTIwbG9nb3xlbnwwfHx8fDE3NTk0ODg5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web3 logo"
+    },
+    {
+      "id": "client-ai",
+      "description": "AI project logo",
+      "imageUrl": "https://images.unsplash.com/photo-1758626054657-a33847437867?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMGxvZ298ZW58MHx8fHwxNzU5NDg4OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai logo"
+    },
+    {
+      "id": "client-media",
+      "description": "Digital media agency logo",
+      "imageUrl": "https://images.unsplash.com/photo-1597128663077-d0235070f8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWRpYSUyMGxvZ298ZW58MHx8fHwxNzU5NDg4OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "media logo"
     }
   ]
 }

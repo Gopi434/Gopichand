@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Play } from 'lucide-react';
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -22,11 +21,15 @@ export default function HeroSection() {
             </Button>
           </div>
           <div className="w-full max-w-4xl pt-8">
-            <div className="aspect-video w-full bg-card rounded-lg border border-border flex items-center justify-center">
-              <div className="text-center text-muted-foreground">
-                <Play className="h-16 w-16 mx-auto text-primary-foreground/30" />
-                <p className="mt-2">Showreel / Crash Course Video</p>
-              </div>
+            <div className="aspect-video w-full bg-card rounded-lg border border-border overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/L4a_p2R19Fc"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
