@@ -51,8 +51,8 @@ export default function HeroSection() {
                     </div>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl p-0 border-0">
-                    <div className="aspect-video">
+                <DialogContent className="w-screen h-screen max-w-full max-h-full p-0 bg-black border-0">
+                    <div className="w-full h-full">
                         <iframe
                             className="w-full h-full"
                             src="https://player.vimeo.com/video/1122408996?autoplay=1&title=0&byline=0&portrait=0"
