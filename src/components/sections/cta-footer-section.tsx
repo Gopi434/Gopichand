@@ -29,7 +29,7 @@ const contactLinks = [
 export default function CtaFooterSection() {
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl">Ready to Elevate Your Product? Let&apos;s Connect.</h2>
         </div>
