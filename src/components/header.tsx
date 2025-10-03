@@ -30,8 +30,8 @@ export default function Header() {
           
           {/* Logo container */}
           <Link href="/" className={cn(
-            "absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out",
-            scrolled && "left-0 translate-x-0"
+            "transition-all duration-500 ease-in-out",
+            !scrolled && "absolute left-1/2 -translate-x-1/2"
           )}>
             <div className="relative flex items-center h-10 w-40">
                 {/* Full Logo - Fades in on scroll */}
