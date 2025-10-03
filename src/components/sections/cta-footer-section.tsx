@@ -1,0 +1,59 @@
+import Link from 'next/link';
+import { Smartphone, Mail, Linkedin } from 'lucide-react';
+import { IconBehance, IconLogo } from '@/components/icons';
+import { Card, CardContent } from '@/components/ui/card';
+
+const contactLinks = [
+  {
+    href: 'tel:+917013691121',
+    icon: Smartphone,
+    label: '+91 7013691121',
+  },
+  {
+    href: 'mailto:gopichandtlr@gmail.com',
+    icon: Mail,
+    label: 'gopichandtlr@gmail.com',
+  },
+  {
+    href: 'https://linkedin.com/in/gopichandtlr',
+    icon: Linkedin,
+    label: 'Gopichand Talluri',
+  },
+  {
+    href: 'https://www.behance.net/gopichandtlr',
+    icon: IconBehance,
+    label: 'Gopichand Talluri',
+  },
+];
+
+export default function CtaFooterSection() {
+  return (
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 border-t">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+          <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl">Ready to Elevate Your Product? Let&apos;s Connect.</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
+          {contactLinks.map((link) => (
+            <Link href={link.href} key={link.href} target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:bg-accent transition-colors">
+                    <CardContent className="p-6 flex flex-col items-center justify-center text-center gap-3">
+                        <link.icon className="h-8 w-8 text-muted-foreground" />
+                        <span className="text-sm font-medium">{link.label}</span>
+                    </CardContent>
+                </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <footer className="mt-20 py-6">
+        <div className="container flex justify-center">
+            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-muted-foreground">
+              <IconLogo className="h-8 w-8" />
+              <span className="font-headline">Gopi.</span>
+            </Link>
+        </div>
+      </footer>
+    </section>
+  );
+}
