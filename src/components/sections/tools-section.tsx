@@ -24,7 +24,7 @@ const designTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> 
   { name: "Photoshop", icon: IconPhotoshop },
   { name: "Illustrator", icon: IconIllustrator },
   { name: "After Effects", icon: IconAfterEffects },
-  { name: "Autodesk Maya", icon: IconMaya },
+  { name: "Premiere Pro", icon: IconMaya },
   { name: "Usability Testing", icon: Users },
   { name: "Design Systems", icon: Library },
   { name: "Responsive Design", icon: TabletSmartphone },
@@ -35,7 +35,7 @@ const techTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> }[
   { name: "HTML", icon: CodeXml },
   { name: "CSS", icon: Braces },
   { name: "JavaScript", icon: Braces },
-  { name: "Firebase", icon: Database },
+  { name: "Autodesk Maya", icon: Database },
 ];
 
 const allTools = [...designTools, ...techTools];

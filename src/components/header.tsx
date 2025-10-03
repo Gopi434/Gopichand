@@ -12,7 +12,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 350);
+      setScrolled(window.scrollY > 200);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -25,13 +25,13 @@ export default function Header() {
         scrolled ? 'bg-background/90 backdrop-blur-sm border-b border-border' : 'bg-transparent'
       )}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <div className="relative flex items-center justify-between h-20 transition-all duration-500">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl h-20">
+        <div className="relative flex items-center justify-between h-full">
           
-          {/* Logo container */}
+          {/* Logo container - Transitions from center to left */}
           <Link href="/" className={cn(
-            "transition-all duration-500 ease-in-out",
-            !scrolled && "absolute left-1/2 -translate-x-1/2"
+            "absolute top-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out",
+            scrolled ? "left-0" : "left-1/2 -translate-x-1/2"
           )}>
             <div className="relative flex items-center h-10 w-40">
                 {/* Full Logo - Fades in on scroll */}
@@ -59,10 +59,10 @@ export default function Header() {
             </div>
           </Link>
           
-          {/* Buttons container */}
+          {/* Buttons container - Fades in on the right */}
           <div className={cn(
             "flex items-center gap-4 transition-all duration-500 ml-auto",
-            scrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+            scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
           )}>
             <Button size="default" variant="default" asChild className="font-bold">
               <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
