@@ -26,40 +26,42 @@ export default function Header() {
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <div className="flex items-center justify-between h-20 transition-all duration-500">
+        <div className="relative flex items-center justify-between h-20 transition-all duration-500">
           
-          <div className={cn(
-            "flex-1 flex transition-all duration-500 ease-in-out",
-            scrolled ? 'justify-start' : 'justify-center'
+          {/* Logo container */}
+          <Link href="/" className={cn(
+            "absolute left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out",
+            scrolled && "left-0 translate-x-0"
           )}>
-            <Link href="/" className={cn("relative flex items-center h-10 transition-all duration-500 ease-in-out", scrolled ? 'w-40' : 'w-10')}>
-              {/* Full Logo - Fades in on scroll */}
-              <Image 
-                src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
-                alt="Gopi Full Logo"
-                width={160}
-                height={40}
-                className={cn(
-                  "absolute inset-0 transition-opacity duration-500 ease-in-out",
-                  scrolled ? "opacity-100" : "opacity-0"
-                )}
-              />
-              {/* Icon Logo - Fades out on scroll */}
-              <Image 
-                src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
-                alt="Gopi Icon Logo"
-                width={40}
-                height={40}
-                className={cn(
-                  "transition-opacity duration-500 ease-in-out",
-                  scrolled ? "opacity-0" : "opacity-100"
-                )}
-              />
-            </Link>
-          </div>
+            <div className="relative flex items-center h-10 w-40">
+                {/* Full Logo - Fades in on scroll */}
+                <Image 
+                  src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
+                  alt="Gopi Full Logo"
+                  width={160}
+                  height={40}
+                  className={cn(
+                    "absolute left-0 top-0 transition-opacity duration-500 ease-in-out",
+                    scrolled ? "opacity-100" : "opacity-0"
+                  )}
+                />
+                {/* Icon Logo - Fades out on scroll */}
+                <Image 
+                  src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
+                  alt="Gopi Icon Logo"
+                  width={40}
+                  height={40}
+                  className={cn(
+                    "transition-opacity duration-500 ease-in-out",
+                    scrolled ? "opacity-0" : "opacity-100"
+                  )}
+                />
+            </div>
+          </Link>
           
+          {/* Buttons container */}
           <div className={cn(
-            "flex items-center gap-4 transition-all duration-500",
+            "flex items-center gap-4 transition-all duration-500 ml-auto",
             scrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
           )}>
             <Button size="default" variant="default" asChild className="font-bold">
