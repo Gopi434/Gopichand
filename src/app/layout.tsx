@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Gopichand's Portfolio",
-  description: 'Portfolio of Gopichand, a multidisciplinary product designer.',
+  title: "Gopichand | Product Designer | Multidisciplinary in Grahic, Motion,Web, 3D and Video editing",
+  description: 'Personal portfolio website of Gopichand, Including showreel and works',
 };
 
 export default function RootLayout({
