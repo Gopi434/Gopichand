@@ -32,7 +32,7 @@ export default function Header() {
                 alt="Gopi Logo"
                 width={40}
                 height={40}
-                className="h-80 w-80 p-4"
+                className="h-80 w-80 p-10"
               />
             </Link>
           </div>
