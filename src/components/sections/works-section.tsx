@@ -56,7 +56,7 @@ export default function WorksSection() {
             I focus on creating seamless, accessible, and high-impact products that deliver meaningful results.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project) => {
             const projectImage = getImage(project.imageId);
             return (

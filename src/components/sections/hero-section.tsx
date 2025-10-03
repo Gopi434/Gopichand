@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { PlayCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const videoThumbnail = PlaceHolderImages.find(img => img.id === 'hero-video-thumbnail');
 
@@ -19,7 +20,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 pt-24 sm:pt-32">
           <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tighter text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold tracking-tighter text-foreground">
               Product Designer | Team Lead | Multidisciplinary
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -30,6 +31,12 @@ export default function HeroSection() {
                 <Link href="https://gopichand-murex.vercel.app" target="_blank" rel="noopener noreferrer">
                   Portfolio
                 </Link>
+              </Button>
+              <Button size="lg" variant="secondary" asChild>
+                <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <Mail />
+                  Mail me
+                </a>
               </Button>
             </div>
             <div className="w-full max-w-5xl pt-8 pb-16">
