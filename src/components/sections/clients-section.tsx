@@ -2,10 +2,12 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const clients = [
-  { name: 'FinTech Client', imageId: 'client-fintech' },
-  { name: 'Web3 Startup', imageId: 'client-web3' },
-  { name: 'AI Project', imageId: 'client-ai' },
-  { name: 'Digital Media Agency', imageId: 'client-media' },
+  { name: 'Client 1', imageId: 'client-fintech' },
+  { name: 'Client 2', imageId: 'client-web3' },
+  { name: 'Client 3', imageId: 'client-ai' },
+  { name: 'Client 4', imageId: 'client-media' },
+  { name: 'Client 5', imageId: 'client-placeholder-1' },
+  { name: 'Client 6', imageId: 'client-placeholder-2' },
 ];
 
 const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
@@ -17,27 +19,26 @@ export default function ClientsSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">Top Clients I Served</h2>
         </div>
-        <div className="divide-y rounded-lg border-t border-b mt-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x">
+        <div className="mt-12">
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
               {clients.map((client) => {
                 const clientImage = getImage(client.imageId);
                 return (
-                  <div key={client.name} className="flex flex-col items-center justify-center p-6 sm:p-8">
+                  <div key={client.name} className="flex justify-center">
                     {clientImage ? (
                       <Image
                         src={clientImage.imageUrl}
                         alt={client.name}
                         data-ai-hint={clientImage.imageHint}
-                        width={100}
-                        height={100}
-                        className="h-24 w-24 object-contain text-muted-foreground"
+                        width={120}
+                        height={60}
+                        className="h-10 object-contain text-muted-foreground"
                       />
                     ) : (
-                      <div className="h-24 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">
-                        Placeholder
+                      <div className="h-10 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">
+                        Logo
                       </div>
                     )}
-                    <p className="mt-4 text-sm font-medium text-muted-foreground">{client.name}</p>
                   </div>
                 );
               })}

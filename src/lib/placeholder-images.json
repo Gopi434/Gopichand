@@ -71,6 +71,18 @@
       "description": "Digital media agency logo",
       "imageUrl": "https://images.unsplash.com/photo-1597128663077-d0235070f8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWRpYSUyMGxvZ298ZW58MHx8fHwxNzU5NDg4OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "media logo"
+    },
+    {
+      "id": "client-placeholder-1",
+      "description": "Placeholder client logo",
+      "imageUrl": "https://images.unsplash.com/photo-1747862712521-e4a37b12a039?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzU5NDMxNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract logo"
+    },
+    {
+      "id": "client-placeholder-2",
+      "description": "Placeholder client logo",
+      "imageUrl": "https://images.unsplash.com/photo-1723790011180-73be054b6c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzU5NDMxNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract logo"
     }
   ]
 }
