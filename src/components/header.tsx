@@ -13,7 +13,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       // A larger scroll value to make the animation trigger feel more natural
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 100);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
