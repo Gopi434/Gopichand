@@ -20,13 +20,13 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 pt-24 sm:pt-32">
           <div className="max-w-5xl mx-auto flex flex-col items-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
               Hi, This is Gopichand
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
               A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pb-12">
               <Button size="default" variant="default" asChild>
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer" className="font-bold">
                   <Image 
