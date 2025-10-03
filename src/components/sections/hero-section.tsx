@@ -27,7 +27,7 @@ export default function HeroSection() {
               A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" variant="default" asChild>
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image 
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
