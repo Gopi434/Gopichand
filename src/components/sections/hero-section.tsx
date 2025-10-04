@@ -61,14 +61,14 @@ export default function HeroSection() {
             <div className="w-full pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
-                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg hover:shadow-primary/20 transition-shadow">
+                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg transition-shadow">
                     {videoThumbnail && (
                       <Image
                         src={videoThumbnail.imageUrl}
                         alt={videoThumbnail.description}
                         data-ai-hint={videoThumbnail.imageHint}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover transition-all duration-300 group-hover:scale-105 grayscale group-hover:grayscale-0"
                       />
                     )}
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
