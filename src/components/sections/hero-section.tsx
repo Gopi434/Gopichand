@@ -11,16 +11,24 @@ import { cn } from '@/lib/utils';
 
 const videoThumbnail = PlaceHolderImages.find(img => img.id === 'hero-video-thumbnail');
 
+const roles = [
+  'UI/UX Designer',
+  'Graphic Designer',
+  'Motion Designer',
+  'Web Developer',
+  'Video Editor',
+  '3D Designer',
+];
+
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 2000); // Change role every 2 seconds to match animation segment
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -29,25 +37,32 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-6">
-            <Image 
+            <Image
                 src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                 alt="Gopi Icon Logo"
                 width={55}
                 height={55}
                 className="mb-4"
               />
-            <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
-              Hi, This is Gopichand
-            </h1>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              A brief, impactful summary about 5+ years of experience across FinTech, Web3, and AI.
-            </p>
+            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">
+              <p className="mr-2.5">Hi, This is Gopichand. I am a Product Designer &</p>
+              <div className="animated-text-container text-primary">
+                <div className="animated-text-item flex flex-col">
+                  {roles.map((role, index) => (
+                    <span key={index} className="h-12 flex items-center">{role}</span>
+                  ))}
+                   {/* Duplicate first item for seamless loop */}
+                   <span className="h-12 flex items-center">{roles[0]}</span>
+                </div>
+              </div>
+            </div>
+
             <div className={cn(
               "flex flex-col sm:flex-row gap-4 pb-12 transition-opacity duration-300"
             )}>
               <Button size="default" variant="default" asChild className="font-bold">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
-                  <Image 
+                  <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
                     width={24}

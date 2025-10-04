@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: 0 0% 3.1%; /* #080808 */
+    --background: 0 0% 0%; /* #000000 */
     --foreground: 0 0% 98%; /* near white */
     --card: 0 0% 5.1%;
     --card-foreground: 0 0% 98%;
@@ -39,11 +39,11 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%; /* mid-gray for descriptions */
-    --accent: 0 0% 14.9%; /* subtle gray for hovers */
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 82.7%; /* #D3D3D3 */
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
+    --border: 0 0% 82.7%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
@@ -56,5 +56,37 @@
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animated-text-container {
+    height: 3rem; /* Adjust to fit font size */
+    overflow: hidden;
+  }
+
+  .animated-text-item {
+    animation: slide-up 10s infinite;
+  }
+
+  @keyframes slide-up {
+    0%, 15% {
+      transform: translateY(0%);
+    }
+    20%, 35% {
+      transform: translateY(-100%);
+    }
+    40%, 55% {
+      transform: translateY(-200%);
+    }
+    60%, 75% {
+      transform: translateY(-300%);
+    }
+    80%, 95% {
+      transform: translateY(-400%);
+    }
+    100% {
+      transform: translateY(-500%);
+    }
   }
 }
