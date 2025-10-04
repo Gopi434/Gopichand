@@ -28,7 +28,7 @@ export default function HeroSection() {
     <>
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-background -z-10" />
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
               Hi, This is Gopichand

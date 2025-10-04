@@ -50,7 +50,7 @@ export default function ToolsSection() {
             My expertise spans across the design and code spectrum, allowing me to build comprehensive and user-friendly products.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl grid-cols-2 items-stretch justify-center gap-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:gap-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 items-stretch justify-center gap-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:gap-8">
           {allTools.map((tool) => (
             <Card key={tool.name} className="flex flex-col items-center justify-center p-4 hover:bg-accent transition-colors">
               <CardContent className="flex flex-col items-center justify-center gap-4 p-0">

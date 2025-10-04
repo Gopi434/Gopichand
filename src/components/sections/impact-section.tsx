@@ -15,7 +15,7 @@ export default function ImpactSection() {
   return (
     <section id="impact" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-5xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
+        <div className="max-w-7xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
               Driven by Data &amp; Design Excellence

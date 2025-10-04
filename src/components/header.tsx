@@ -11,7 +11,7 @@ export default function Header() {
         'fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm'
       )}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl h-20 py-4">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-2">
         <div className="relative flex items-center justify-center h-full">
           <Link href="/" className="flex items-center justify-center">
               <Image 
