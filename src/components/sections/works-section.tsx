@@ -57,9 +57,7 @@ export default function WorksSection() {
                 <Link href={project.link} key={project.name} target="_blank" rel="noopener noreferrer">
                   <Card className="overflow-hidden h-full group hover:bg-white/5 transition-all">
                     <CardHeader className="flex flex-row items-center justify-between p-4">
-                      <div className="flex items-center gap-3">
-                        <CardTitle className="text-base font-medium">{project.name}</CardTitle>
-                      </div>
+                      <CardTitle className="text-base font-medium">{project.name}</CardTitle>
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </CardHeader>
                     <CardContent className="p-0">
@@ -70,7 +68,7 @@ export default function WorksSection() {
                            data-ai-hint={projectImage.imageHint}
                            width={600}
                            height={400}
-                           className="object-cover w-full h-60 grayscale group-hover:grayscale-0 transition-all duration-300"
+                           className="object-cover w-full h-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
                          />
                       )}
                     </CardContent>
