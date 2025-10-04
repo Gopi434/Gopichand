@@ -1,44 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Users, 
-  Library, 
-  TabletSmartphone, 
-  MousePointerClick,
-  CodeXml,
-  Braces,
-  Database
-} from "lucide-react";
-import { 
-  IconFigma, 
-  IconXD, 
-  IconPhotoshop, 
-  IconIllustrator, 
-  IconAfterEffects, 
-  IconMaya 
-} from "@/components/icons";
-import type { ComponentType, SVGProps } from "react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Image from "next/image";
 
-const designTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> }[] = [
-  { name: "Figma", icon: IconFigma },
-  { name: "Adobe XD", icon: IconXD },
-  { name: "Photoshop", icon: IconPhotoshop },
-  { name: "Illustrator", icon: IconIllustrator },
-  { name: "After Effects", icon: IconAfterEffects },
-  { name: "Premiere Pro", icon: IconMaya },
-  { name: "HTML", icon: Users },
-  { name: "CSS", icon: Library },
-  { name: "JavaScript", icon: TabletSmartphone },
-  { name: "jQuery", icon: MousePointerClick },
+const tools: { name: string; imageId: string }[] = [
+  { name: "Figma", imageId: "tool-figma" },
+  { name: "Adobe XD", imageId: "tool-xd" },
+  { name: "Photoshop", imageId: "tool-photoshop" },
+  { name: "Illustrator", imageId: "tool-illustrator" },
+  { name: "After Effects", imageId: "tool-after-effects" },
+  { name: "Premiere Pro", imageId: "tool-premiere-pro" },
+  { name: "HTML", imageId: "tool-html" },
+  { name: "CSS", imageId: "tool-css" },
+  { name: "JavaScript", imageId: "tool-javascript" },
+  { name: "jQuery", imageId: "tool-jquery" },
+  { name: "Bootstrap", imageId: "tool-bootstrap" },
+  { name: "Firebase Studio", imageId: "tool-firebase" },
+  { name: "Framer", imageId: "tool-framer" },
+  { name: "Autodesk Maya", imageId: "tool-maya" },
 ];
 
-const techTools: { name: string; icon: ComponentType<SVGProps<SVGSVGElement>> }[] = [
-  { name: "Bootstrap", icon: CodeXml },
-  { name: "Firebase Studio", icon: Braces },
-  { name: "Framer", icon: Braces },
-  { name: "Autodesk Maya", icon: Database },
-];
-
-const allTools = [...designTools, ...techTools];
+const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
 
 export default function ToolsSection() {
   return (
@@ -50,15 +31,28 @@ export default function ToolsSection() {
             My expertise spans across the design and code spectrum, allowing me to build comprehensive and user-friendly products.
           </p>
         </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 items-stretch justify-center gap-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:gap-8">
-          {allTools.map((tool) => (
-            <Card key={tool.name} className="flex flex-col items-center justify-center p-4 hover:bg-accent transition-colors">
-              <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
-                <tool.icon className="h-12 w-12 text-muted-foreground" />
-                <span className="text-sm font-medium text-center">{tool.name}</span>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mx-auto grid max-w-7xl grid-cols-2 items-stretch justify-center gap-6 py-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          {tools.map((tool) => {
+            const toolImage = getImage(tool.imageId);
+            return (
+              <Card key={tool.name} className="flex flex-col items-center justify-center p-4 hover:bg-accent transition-colors">
+                <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
+                  {toolImage ? (
+                    <Image
+                      src={toolImage.imageUrl}
+                      alt={tool.name}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 object-contain"
+                    />
+                  ) : (
+                    <div className="h-12 w-12 bg-muted rounded-md" />
+                  )}
+                  <span className="text-sm font-medium text-center">{tool.name}</span>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

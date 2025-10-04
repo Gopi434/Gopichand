@@ -9,80 +9,164 @@
     {
       "id": "hero-video-thumbnail",
       "description": "Video thumbnail for hero section showreel",
-      "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMG1vdGlvbiUyMGdyYXBoaWNzfGVufDB8fHx8MTc2MDE2NzY5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/cover.png",
       "imageHint": "abstract motion graphics"
     },
     {
       "id": "work-paycio-mobile",
       "description": "Screenshot of Paycio Mobile App",
-      "imageUrl": "https://images.unsplash.com/photo-1650959828226-f9d53a7c1f64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjBhcHAlMjBmaW50ZWNofGVufDB8fHx8MTc1OTQ4NjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/UIUX%20Design.jpg",
       "imageHint": "mobile app fintech"
     },
     {
       "id": "work-paycio-website",
-      "description": "Screenshot of Paycio Global &amp; USA Website",
-      "imageUrl": "https://images.unsplash.com/photo-1583932692875-a42450d50acf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1OTQ4NjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Screenshot of Paycio Global & USA Website",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/Graphic%20design.jpg",
       "imageHint": "website dashboard"
     },
     {
       "id": "work-indoex",
       "description": "Screenshot of IndoEX project",
-      "imageUrl": "https://images.unsplash.com/photo-1614787296891-d1b2b1aced36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjcnlwdG8lMjBleGNoYW5nZXxlbnwwfHx8fDE3NTkzODk3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/Motion%20Design.jpg",
       "imageHint": "crypto exchange"
     },
     {
       "id": "work-chatbucket",
       "description": "Screenshot of ChatBucket project",
-      "imageUrl": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGF0JTIwYXBwbGljYXRpb258ZW58MHx8fHwxNzU5NDYzODE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/wd.jpg",
       "imageHint": "chat application"
     },
     {
       "id": "work-aqura",
       "description": "Screenshot of Aqura project",
-      "imageUrl": "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc1OTQ0OTg5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/Graphic%20design.jpg",
       "imageHint": "data analytics"
     },
     {
       "id": "work-motion-3d",
       "description": "Still from Motion/3D work",
-      "imageUrl": "https://images.unsplash.com/photo-1707567019592-a05a41cc0b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHwzZCUyMGFic3RyYWN0fGVufDB8fHx8MTc1OTQ4NjcxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/Preview%20Cards/3d.jpg",
       "imageHint": "3d abstract"
     },
     {
       "id": "client-fintech",
       "description": "Fintech company logo",
-      "imageUrl": "https://images.unsplash.com/photo-1626756826756-03792bd8fae8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaW50ZWNoJTIwbG9nb3xlbnwwfHx8fDE3NTkzOTg5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/paycio.png",
       "imageHint": "fintech logo"
     },
     {
       "id": "client-web3",
       "description": "Web3 startup logo",
-      "imageUrl": "https://images.unsplash.com/photo-1669220235918-04cbf9e054b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWIzJTIwbG9nb3xlbnwwfHx8fDE3NTk0ODg5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/indoex.png",
       "imageHint": "web3 logo"
     },
     {
       "id": "client-ai",
       "description": "AI project logo",
-      "imageUrl": "https://images.unsplash.com/photo-1758626054657-a33847437867?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaSUyMGxvZ298ZW58MHx8fHwxNzU5NDg4OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/procal.png",
       "imageHint": "ai logo"
     },
     {
       "id": "client-media",
       "description": "Digital media agency logo",
-      "imageUrl": "https://images.unsplash.com/photo-1597128663077-d0235070f8c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWRpYSUyMGxvZ298ZW58MHx8fHwxNzU5NDg4OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/bni.png",
       "imageHint": "media logo"
     },
     {
       "id": "client-placeholder-1",
       "description": "Placeholder client logo",
-      "imageUrl": "https://images.unsplash.com/photo-1747862712521-e4a37b12a039?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzU5NDMxNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/nifd.png",
       "imageHint": "abstract logo"
     },
     {
       "id": "client-placeholder-2",
       "description": "Placeholder client logo",
-      "imageUrl": "https://images.unsplash.com/photo-1723790011180-73be054b6c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzU5NDMxNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/logos/km.png",
       "imageHint": "abstract logo"
+    },
+    {
+      "id": "tool-figma",
+      "description": "Figma tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/fig.png",
+      "imageHint": "figma logo"
+    },
+    {
+      "id": "tool-xd",
+      "description": "Adobe XD tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/xd.png",
+      "imageHint": "xd logo"
+    },
+    {
+      "id": "tool-photoshop",
+      "description": "Photoshop tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/ps.png",
+      "imageHint": "photoshop logo"
+    },
+    {
+      "id": "tool-illustrator",
+      "description": "Illustrator tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/ai.png",
+      "imageHint": "illustrator logo"
+    },
+    {
+      "id": "tool-after-effects",
+      "description": "After Effects tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/ae.png",
+      "imageHint": "after effects logo"
+    },
+    {
+      "id": "tool-premiere-pro",
+      "description": "Premiere Pro tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/pro.png",
+      "imageHint": "premiere pro logo"
+    },
+    {
+      "id": "tool-html",
+      "description": "HTML tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/html.png",
+      "imageHint": "html logo"
+    },
+    {
+      "id": "tool-css",
+      "description": "CSS tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/css.png",
+      "imageHint": "css logo"
+    },
+    {
+      "id": "tool-javascript",
+      "description": "JavaScript tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/js.png",
+      "imageHint": "javascript logo"
+    },
+    {
+      "id": "tool-jquery",
+      "description": "jQuery tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/jQuery.png",
+      "imageHint": "jquery logo"
+    },
+    {
+      "id": "tool-bootstrap",
+      "description": "Bootstrap tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/Bootstrap.png",
+      "imageHint": "bootstrap logo"
+    },
+    {
+      "id": "tool-firebase",
+      "description": "Firebase tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/firebase.png",
+      "imageHint": "firebase logo"
+    },
+    {
+      "id": "tool-framer",
+      "description": "Framer tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/framer.png",
+      "imageHint": "framer logo"
+    },
+    {
+      "id": "tool-maya",
+      "description": "Autodesk Maya tool logo",
+      "imageUrl": "https://raw.githubusercontent.com/Gopi434/Media/refs/heads/main/Gopichand%20assets/tools/maya.png",
+      "imageHint": "maya logo"
     }
   ]
 }
