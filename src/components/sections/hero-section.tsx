@@ -27,7 +27,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000); // Change role every 2 seconds to match animation segment
+    }, 2000); // This timing should align with the CSS animation
     return () => clearInterval(interval);
   }, []);
 
@@ -44,8 +44,9 @@ export default function HeroSection() {
                 height={55}
                 className="mb-4"
               />
+            <p className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">Hi, This is Gopichand.</p>
             <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">
-              <p className="mr-2.5">Hi, This is Gopichand. I am a Product Designer &</p>
+              <p className="mr-2.5">I am a Product Designer &amp;</p>
               <div className="animated-text-container text-primary">
                 <div className="animated-text-item flex flex-col">
                   {roles.map((role, index) => (

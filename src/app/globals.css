@@ -66,27 +66,30 @@
   }
 
   .animated-text-item {
-    animation: slide-up 10s infinite;
+    animation: slide-up 12s infinite;
   }
 
   @keyframes slide-up {
-    0%, 15% {
+    0%, 12.5% {
       transform: translateY(0%);
     }
-    20%, 35% {
+    16.66%, 29.16% {
       transform: translateY(-100%);
     }
-    40%, 55% {
+    33.32%, 45.82% {
       transform: translateY(-200%);
     }
-    60%, 75% {
+    49.98%, 62.48% {
       transform: translateY(-300%);
     }
-    80%, 95% {
+    66.64%, 79.14% {
       transform: translateY(-400%);
     }
-    100% {
+    83.3%, 95.8% {
       transform: translateY(-500%);
+    }
+    100% {
+      transform: translateY(-600%);
     }
   }
 }
