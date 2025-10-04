@@ -35,7 +35,7 @@ export default function ToolsSection() {
           {tools.map((tool) => {
             const toolImage = getImage(tool.imageId);
             return (
-              <Card key={tool.name} className="group flex flex-col items-center justify-center p-4 hover:bg-accent transition-colors">
+              <Card key={tool.name} className="group flex flex-col items-center justify-center p-4 transition-colors">
                 <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
                   {toolImage ? (
                     <Image

@@ -1,44 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Smartphone, Globe, Bot, GanttChartSquare, Video } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import type { ComponentType } from 'react';
 
 const projects = [
   {
     name: 'UI/UX Design',
-    icon: Smartphone,
     imageId: 'work-paycio-mobile',
     link: 'https://www.behance.net/gopichandtlr',
   },
   {
     name: 'Graphic Design',
-    icon: Globe,
     imageId: 'work-paycio-website',
     link: 'https://www.behance.net/gallery/134131883/Graphic-Design-Works-Social-media-Illustrations',
   },
   {
     name: 'Motion design',
-    icon: GanttChartSquare,
     imageId: 'work-indoex',
     link: 'https://www.behance.net/gallery/134130099/Motion-Design-works-Motion-Videos-Icon-Animation',
   },
   {
     name: 'Web Development',
-    icon: Bot,
     imageId: 'work-chatbucket',
     link: '#',
   },
   {
     name: 'Video Editing',
-    icon: GanttChartSquare,
     imageId: 'work-aqura',
     link: '#',
   },
   {
     name: '3D Design',
-    icon: Video,
     imageId: 'work-motion-3d',
     link: 'https://www.behance.net/gallery/219630569/3D-Design-works-3d-Modelling-Animation',
   },
@@ -48,7 +41,7 @@ const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
 
 export default function WorksSection() {
   return (
-    <section id="works" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="works" className="w-full py-12 md-py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -62,7 +55,7 @@ export default function WorksSection() {
               const projectImage = getImage(project.imageId);
               return (
                 <Link href={project.link} key={project.name} target="_blank" rel="noopener noreferrer">
-                  <Card className="overflow-hidden h-full group hover:border-primary/50 transition-all">
+                  <Card className="overflow-hidden h-full group hover:bg-white/5 transition-all">
                     <CardHeader className="flex flex-row items-center justify-between p-4">
                       <div className="flex items-center gap-3">
                         <CardTitle className="text-base font-medium">{project.name}</CardTitle>

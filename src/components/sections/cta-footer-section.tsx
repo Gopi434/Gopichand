@@ -38,7 +38,7 @@ export default function CtaFooterSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
             {contactLinks.map((link) => (
               <Link href={link.href} key={link.href} target="_blank" rel="noopener noreferrer">
-                  <Card className="h-full hover:bg-accent transition-colors">
+                  <Card className="h-full hover:bg-white/5 transition-colors">
                       <CardContent className="p-6 flex flex-col items-center justify-center text-center gap-3">
                           <link.icon className="h-8 w-8 text-muted-foreground" />
                           <span className="text-sm font-medium">{link.label}</span>
