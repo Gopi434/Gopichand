@@ -45,9 +45,11 @@ export default function HeroSection() {
                 className="mb-4"
               />
             <p className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">Hi, This is Gopichand.</p>
-            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">
+            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground h-12 overflow-hidden">
               <p className="mr-2.5">I am a Product Designer &amp;</p>
-              <span className="text-primary">{roles[currentRoleIndex]}</span>
+              <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade">
+                {roles[currentRoleIndex]}
+              </span>
             </div>
 
             <div className={cn(
@@ -75,7 +77,7 @@ export default function HeroSection() {
             <div className="w-full pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
-                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg">
+                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer">
                     {videoThumbnail && (
                       <Image
                         src={videoThumbnail.imageUrl}
