@@ -17,7 +17,6 @@ export default function HeroSection() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Trigger when user scrolls more than 50px to start the fade out
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -26,11 +25,18 @@ export default function HeroSection() {
 
   return (
     <>
-      <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
+      <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground pt-12">
+            <Image 
+                src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
+                alt="Gopi Icon Logo"
+                width={55}
+                height={55}
+                className="mb-4"
+              />
+            <h1 className="text-4xl sm:text-5xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
               Hi, This is Gopichand
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -61,7 +67,7 @@ export default function HeroSection() {
             <div className="w-full pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
-                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg transition-shadow">
+                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer shadow-lg">
                     {videoThumbnail && (
                       <Image
                         src={videoThumbnail.imageUrl}
