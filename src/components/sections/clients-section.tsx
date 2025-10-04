@@ -25,7 +25,7 @@ export default function ClientsSection() {
                 {clients.map((client) => {
                   const clientImage = getImage(client.imageId);
                   return (
-                    <div key={client.name} className="flex justify-center">
+                    <div key={client.name} className="flex justify-center group">
                       {clientImage ? (
                         <Image
                           src={clientImage.imageUrl}
@@ -33,7 +33,7 @@ export default function ClientsSection() {
                           data-ai-hint={clientImage.imageHint}
                           width={120}
                           height={60}
-                          className="h-10 object-contain text-muted-foreground"
+                          className="h-10 object-contain text-muted-foreground grayscale group-hover:grayscale-0 transition-all duration-300"
                         />
                       ) : (
                         <div className="h-10 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">

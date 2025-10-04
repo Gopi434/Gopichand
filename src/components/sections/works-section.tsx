@@ -7,40 +7,40 @@ import type { ComponentType } from 'react';
 
 const projects = [
   {
-    name: 'Paycio Mobile App',
+    name: 'UI/UX Design',
     icon: Smartphone,
     imageId: 'work-paycio-mobile',
-    link: '#',
+    link: 'https://www.behance.net/gopichandtlr',
   },
   {
-    name: 'Paycio Global &amp; USA Website',
+    name: 'Graphic Design',
     icon: Globe,
     imageId: 'work-paycio-website',
-    link: '#',
+    link: 'https://www.behance.net/gallery/134131883/Graphic-Design-Works-Social-media-Illustrations',
   },
   {
-    name: 'IndoEX',
+    name: 'Motion design',
     icon: GanttChartSquare,
     imageId: 'work-indoex',
-    link: '#',
+    link: 'https://www.behance.net/gallery/134130099/Motion-Design-works-Motion-Videos-Icon-Animation',
   },
   {
-    name: 'ChatBucket',
+    name: 'Web Development',
     icon: Bot,
     imageId: 'work-chatbucket',
     link: '#',
   },
   {
-    name: 'Aqura',
+    name: 'Video Editing',
     icon: GanttChartSquare,
     imageId: 'work-aqura',
     link: '#',
   },
   {
-    name: 'Motion/3D Work',
+    name: '3D Design',
     icon: Video,
     imageId: 'work-motion-3d',
-    link: '#',
+    link: 'https://www.behance.net/gallery/219630569/3D-Design-works-3d-Modelling-Animation',
   },
 ];
 
@@ -65,7 +65,6 @@ export default function WorksSection() {
                   <Card className="overflow-hidden h-full group hover:border-primary/50 transition-all">
                     <CardHeader className="flex flex-row items-center justify-between p-4">
                       <div className="flex items-center gap-3">
-                        <project.icon className="w-5 h-5 text-muted-foreground" />
                         <CardTitle className="text-base font-medium">{project.name}</CardTitle>
                       </div>
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -78,7 +77,7 @@ export default function WorksSection() {
                            data-ai-hint={projectImage.imageHint}
                            width={600}
                            height={400}
-                           className="object-cover w-full h-60"
+                           className="object-cover w-full h-60 grayscale group-hover:grayscale-0 transition-all duration-300"
                          />
                       )}
                     </CardContent>
