@@ -27,7 +27,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000); // This timing should align with the CSS animation
+    }, 2000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -47,15 +47,7 @@ export default function HeroSection() {
             <p className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">Hi, This is Gopichand.</p>
             <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground">
               <p className="mr-2.5">I am a Product Designer &amp;</p>
-              <div className="animated-text-container text-primary">
-                <div className="animated-text-item flex flex-col">
-                  {roles.map((role, index) => (
-                    <span key={index} className="h-12 flex items-center">{role}</span>
-                  ))}
-                   {/* Duplicate first item for seamless loop */}
-                   <span className="h-12 flex items-center">{roles[0]}</span>
-                </div>
-              </div>
+              <span className="text-primary">{roles[currentRoleIndex]}</span>
             </div>
 
             <div className={cn(
