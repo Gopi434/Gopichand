@@ -27,7 +27,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000); 
+    }, 1500);
     return () => clearInterval(interval);
   }, []);
 
@@ -38,30 +38,30 @@ export default function HeroSection() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-6">
             <Image
-                src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
-                alt="Gopi Icon Logo"
-                width={55}
-                height={55}
-                className="mb-4"
-              />
-            <p className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter text-muted-foreground">Hi, This is Gopichand.</p>
-            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-tighter text-foreground h-12 overflow-hidden">
-              <p className="mr-2.5">I am a Product Designer &amp;</p>
-              <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade">
+              src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
+              alt="Gopi Icon Logo"
+              width={75}
+              height={75}
+              className="mb-4"
+            />
+            <p className="text-xl sm:text-2xl md:text-4xl tracking-tighter text-muted-foreground">Hi, This is Gopichand. I am a</p>
+            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tighter text-foreground h-12">
+              <h1 className="mr-2.5">Product Designer &amp;</h1>
+              <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
                 {roles[currentRoleIndex]}
               </span>
             </div>
 
             <div className={cn(
-              "flex flex-col sm:flex-row gap-4 pb-12 transition-opacity duration-300"
+              "flex flex-col sm:flex-row gap-5 pb-10 transition-opacity duration-300 pt-7"
             )}>
               <Button size="default" variant="default" asChild className="font-bold">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                     className="h-6 w-6"
                   />
                   Portfolio
@@ -94,15 +94,15 @@ export default function HeroSection() {
                   </div>
                 </DialogTrigger>
                 <DialogContent className="w-screen h-screen max-w-full max-h-full p-0 bg-black border-0">
-                    <div className="w-full h-full">
-                        <iframe
-                            className="w-full h-full"
-                            src="https://player.vimeo.com/video/1122408996?autoplay=1&title=0&byline=0&portrait=0"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
+                  <div className="w-full h-full">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://player.vimeo.com/video/1122408996?autoplay=1&title=0&byline=0&portrait=0"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </DialogContent>
               </Dialog>
             </div>

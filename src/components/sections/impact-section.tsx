@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const stats = [
-  { value: '5+', label: 'Years of Experience' },
-  { value: '10+', label: 'Products Designed' },
-  { value: '8K+', label: 'Instagram Followers' },
-  { value: '1M+', label: 'Content Views' },
+  { value: '5K+', label: 'Ideas Explored' },
+  { value: '10+', label: 'Creative Hours' },
+  { value: '100K+', label: 'Layers Organized' },
+  { value: '1M+', label: 'Pixels Placed' },
 ];
 
 const profileImage = PlaceHolderImages.find(img => img.id === 'impact-profile');
