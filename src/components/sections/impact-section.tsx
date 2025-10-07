@@ -18,10 +18,10 @@ export default function ImpactSection() {
         <div className="max-w-7xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-              Driven by Data &amp; Design Excellence
+            Shaped by Design, Driven by Curiosity
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              At CoinEarth, my focus on user-centered design and data analysis led to significant improvements. By optimizing user flows and interfaces, we reduced error frequency by 20% and cut perceived load time by approximately 15%. Streamlining our design-to-development pipeline also improved feature delivery speed by 20%.
+            Every project, every pixel and every idea has shaped the way I create. This is the story of curiosity, dedication and the drive to bring ideas to life across multiple disciplines.
             </p>
             <div className="flex items-center gap-4 pt-4">
               {profileImage && (
