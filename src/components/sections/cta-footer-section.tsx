@@ -5,22 +5,22 @@ import { Card, CardContent } from '@/components/ui/card';
 const contactLinks = [
   {
     href: 'tel:+917013691121',
-    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/e9df76b9ffeefff7238d40fb2f8d814c8ad6d017/Gopichand%20assets/Call.svg',
+    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/b92851f92818da078877927b1de41856d31a0785/Gopichand%20assets/Contact%20icons/Call.svg',
     label: '+91 7013691121',
   },
   {
     href: 'mailto:gopichandtlr@gmail.com',
-    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/e9df76b9ffeefff7238d40fb2f8d814c8ad6d017/Gopichand%20assets/Mail.svg',
+    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/b92851f92818da078877927b1de41856d31a0785/Gopichand%20assets/Contact%20icons/Mail.svg',
     label: 'gopichandtlr@gmail.com',
   },
   {
     href: 'https://linkedin.com/in/gopichandtlr',
-    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/e9df76b9ffeefff7238d40fb2f8d814c8ad6d017/Gopichand%20assets/LinkedIn.svg',
+    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/b92851f92818da078877927b1de41856d31a0785/Gopichand%20assets/Contact%20icons/LinkedIn.svg',
     label: 'Gopichand Talluri',
   },
   {
     href: 'https://www.behance.net/gopichandtlr',
-    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/e9df76b9ffeefff7238d40fb2f8d814c8ad6d017/Gopichand%20assets/Behance.svg',
+    iconUrl: 'https://raw.githubusercontent.com/Gopi434/Media/b92851f92818da078877927b1de41856d31a0785/Gopichand%20assets/Contact%20icons/Behance.svg',
     label: 'Gopichand Talluri',
   },
 ];
