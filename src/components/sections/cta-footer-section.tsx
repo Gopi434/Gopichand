@@ -31,7 +31,7 @@ export default function CtaFooterSection() {
        <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl">Ready to Bring Ideas to Life</h2>
+            <h2 className="text-3xl font-bold font-headline tracking-normal sm:text-4xl">Ready to Bring Ideas to Life</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto mt-12">
             {contactLinks.map((link) => (

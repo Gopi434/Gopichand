@@ -44,8 +44,8 @@ export default function HeroSection() {
               height={75}
               className="mb-4"
             />
-            <p className="text-xl sm:text-2xl md:text-4xl tracking-tighter text-muted-foreground">Hi, This is Gopichand. I am a</p>
-            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tighter text-foreground h-12">
+            <p className="text-xl sm:text-2xl md:text-4xl tracking-normal text-muted-foreground">Hi, This is Gopichand. I am a</p>
+            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-normal text-foreground h-12">
               <h1 className="mr-2.5">Product Designer &amp;</h1>
               <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
                 {roles[currentRoleIndex]}
