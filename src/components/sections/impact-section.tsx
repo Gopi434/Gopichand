@@ -31,7 +31,7 @@ export default function ImpactSection() {
                     alt={profileImage.description}
                     data-ai-hint={profileImage.imageHint}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               )}

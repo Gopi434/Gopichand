@@ -8,7 +8,7 @@ import DownloadButton from '@/components/download-button';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-background px-4 sm:px-8 md:px-12 lg:px-24">
       <main className="flex-grow">
         <HeroSection />
         <ClientsSection />
