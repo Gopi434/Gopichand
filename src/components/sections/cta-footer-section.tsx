@@ -55,9 +55,9 @@ export default function CtaFooterSection() {
               <Image 
                 src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
                 alt="Gopi Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10"
+                width={80}
+                height={80}
+                className="h-20 w-20"
               />
             </Link>
         </div>
