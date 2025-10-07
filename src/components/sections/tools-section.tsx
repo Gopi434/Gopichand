@@ -26,7 +26,7 @@ export default function ToolsSection() {
     <section id="tools" className="w-full py-12 md:py-24 lg:py-30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold font-headline tracking-normal sm:text-4xl md:text-5xl">Tools I Create With</h2>
+          <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">Tools I Create With</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
           These are the tools that shape my ideas into visuals, prototypes and motion. Each one’s part of my daily mix, helping me move from concept to final design seamlessly.
           </p>
@@ -35,7 +35,7 @@ export default function ToolsSection() {
           {tools.map((tool) => {
             const toolImage = getImage(tool.imageId);
             return (
-              <Card key={tool.name} className="group flex flex-col justify-center p-4 transition-colors hover:bg-white/[.03] h-20">
+              <Card key={tool.name} className="group flex flex-col justify-center p-4 transition-colors hover:bg-white/[.03] h-24">
                 <CardContent className="flex flex-row items-center gap-4 p-0">
                   {toolImage ? (
                     <Image

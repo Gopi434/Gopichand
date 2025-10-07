@@ -17,7 +17,7 @@ export default function ImpactSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold font-headline tracking-normal sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">
             Shaped by Design, Driven by Curiosity
             </h2>
             <p className="text-muted-foreground md:text-lg">

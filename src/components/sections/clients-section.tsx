@@ -18,7 +18,7 @@ export default function ClientsSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h2 className="text-3xl font-bold font-headline tracking-normal sm:text-4xl md:text-5xl">Top Clients I Served</h2>
+            <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">Top Clients I Served</h2>
           </div>
           <div className="mt-12">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">

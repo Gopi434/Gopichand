@@ -40,12 +40,12 @@ export default function HeroSection() {
             <Image
               src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
               alt="Gopi Icon Logo"
-              width={75}
-              height={75}
-              className="mb-4"
+              width={150}
+              height={150}
+              className="mb-8"
             />
-            <p className="text-xl sm:text-2xl md:text-4xl tracking-normal text-muted-foreground">Hi, This is Gopichand. I am a</p>
-            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-normal text-foreground h-12">
+            <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground">Hi, This is Gopichand. I am a</p>
+            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
               <h1 className="mr-2.5">Product Designer &amp;</h1>
               <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
                 {roles[currentRoleIndex]}
@@ -60,9 +60,9 @@ export default function HeroSection() {
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
-                    width={24}
-                    height={24}
-                    className="h-6 w-6"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7"
                   />
                   Portfolio
                 </a>
