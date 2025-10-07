@@ -25,14 +25,15 @@ export default function ImpactSection() {
             </p>
             <div className="flex items-center gap-4 pt-4">
               {profileImage && (
-                <Image
-                  src={profileImage.imageUrl}
-                  alt={profileImage.description}
-                  data-ai-hint={profileImage.imageHint}
-                  width={64}
-                  height={64}
-                  className="rounded-full object-cover"
-                />
+                <div className="relative h-24 w-24 overflow-hidden rounded-full">
+                  <Image
+                    src={profileImage.imageUrl}
+                    alt={profileImage.description}
+                    data-ai-hint={profileImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               )}
               <div>
                 <p className="font-semibold">Gopichand Talluri</p>
