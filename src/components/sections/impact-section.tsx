@@ -4,7 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const stats = [
   { value: '5K+', label: 'Ideas Explored' },
-  { value: '10+', label: 'Creative Hours' },
+  { value: '10K+', label: 'Creative Hours' },
   { value: '100K+', label: 'Layers Organized' },
   { value: '1M+', label: 'Pixels Placed' },
 ];
@@ -13,7 +13,7 @@ const profileImage = PlaceHolderImages.find(img => img.id === 'impact-profile');
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="impact" className="w-full py-12 md:py-35 lg:py-55 mt-20 mb-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
           <div className="space-y-6">
