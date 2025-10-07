@@ -47,17 +47,17 @@ export default function CtaFooterSection() {
           </div>
         </div>
       </div>
-      <footer className="mt-24 pb-12">
-        <div className="container">
-          <hr className="mb-12 border-border" />
+      <footer className="mt-40 pb-0">
+        <div className="container mt-10">
+          <hr className="mb-20 border-border " />
           <div className="flex justify-center">
             <Link href="/" className="flex items-center gap-0 text-2xl font-bold text-muted-foreground">
               <Image 
                 src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/Logo%202.O.svg"
                 alt="Gopi Logo"
-                width={240}
-                height={240}
-                className="w-40 h-40"
+                width={2000}
+                height={2000}
+                className="w-120 h-120"
               />
             </Link>
           </div>

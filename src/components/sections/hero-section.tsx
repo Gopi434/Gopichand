@@ -55,19 +55,19 @@ export default function HeroSection() {
             <div className={cn(
               "flex flex-col sm:flex-row gap-5 pb-10 transition-opacity duration-300 pt-7"
             )}>
-              <Button size="default" variant="default" asChild className="font-bold">
+              <Button size="lg" variant="default" asChild className="font-bold">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
                     alt="Behance"
-                    width={20}
-                    height={20}
+                    width={24}
+                    height={24}
                     className="h-6 w-6"
                   />
                   Portfolio
                 </a>
               </Button>
-              <Button size="default" variant="secondary" asChild className="font-bold">
+              <Button size="lg" variant="secondary" asChild className="font-bold">
                 <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer">
                   <Mail />
                   Mail me
