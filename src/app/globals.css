@@ -59,18 +59,18 @@
   }
 }
 
-@keyframes slide-up-and-fade {
+@keyframes slide-up-fade-in-out {
   0% {
     opacity: 0;
     transform: translateY(100%);
   }
-  10% {
+  15% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
-  90% {
+  85% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
   100% {
     opacity: 0;
@@ -78,6 +78,6 @@
   }
 }
 
-.animate-slide-up-and-fade {
-  animation: slide-up-and-fade 2s forwards;
+.animate-slide-up-fade-in-out {
+  animation: slide-up-fade-in-out 2s infinite;
 }

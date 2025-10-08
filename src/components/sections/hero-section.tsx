@@ -23,15 +23,10 @@ const roles = [
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsAnimating(false);
-      setTimeout(() => {
-        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-        setIsAnimating(true);
-      }, 100); // Short delay to allow state update before re-applying animation
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
@@ -57,11 +52,9 @@ export default function HeroSection() {
               <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
               <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
                 <h1 className="mr-2.5">Product Designer &amp;</h1>
-                {isAnimating && (
-                  <span key={currentRoleIndex} className="text-muted-foreground animate-slide-up-and-fade">
-                    {roles[currentRoleIndex]}
-                  </span>
-                )}
+                <span key={currentRoleIndex} className="text-muted-foreground animate-slide-up-fade-in-out">
+                  {roles[currentRoleIndex]}
+                </span>
               </div>
             </div>
             
