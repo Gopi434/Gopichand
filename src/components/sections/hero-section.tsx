@@ -40,8 +40,8 @@ export default function HeroSection() {
             <Image
               src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
               alt="Gopi Icon Logo"
-              width={150}
-              height={150}
+              width={110}
+              height={110}
               className="mb-8"
             />
             <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground">Hi, This is Gopichand. I am a</p>
@@ -77,7 +77,7 @@ export default function HeroSection() {
             <div className="w-full pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
-                  <div className="group relative aspect-video w-full bg-card rounded-2xl border border-border overflow-hidden cursor-pointer">
+                  <div className="group relative aspect-video w-full bg-card rounded-3xl border border-border overflow-hidden cursor-pointer">
                     {videoThumbnail && (
                       <Image
                         src={videoThumbnail.imageUrl}

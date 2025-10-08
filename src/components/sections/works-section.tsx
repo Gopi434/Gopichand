@@ -46,7 +46,7 @@ export default function WorksSection() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">My Creative Spectrum</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground md:text-xl lg:text-base xl:text-xl">
             I move across multiple design disciplines — from pixels to code, motion to 3D. Each craft lets me explore ideas from a different lens and build experiences that feel whole.
             </p>
           </div>

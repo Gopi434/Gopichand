@@ -45,7 +45,7 @@ export default function ImpactSection() {
             {stats.map((stat) => (
               <Card key={stat.label}>
                 <CardContent className="p-6 flex flex-col items-center justify-center text-center">
-                  <p className="text-4xl sm:text-5xl font-bold font-headline text-primary">{stat.value}</p>
+                  <p className="text-4xl sm:text-5xl font-bold font-headline text-primary tracking-tight">{stat.value}</p>
                   <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
                 </CardContent>
               </Card>
