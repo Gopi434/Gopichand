@@ -48,7 +48,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col items-center space-y-2">
-              <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground">Hi, This is Gopichand. I am a</p>
+              <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
               <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
                 <h1 className="mr-2.5">Product Designer &amp;</h1>
                 <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div className={cn(
               "flex flex-col sm:flex-row gap-5 pb-10 transition-opacity duration-300 pt-7"
             )}>
-              <Button size="lg" variant="default" asChild className="font-bold">
+              <Button size="lg" variant="default" asChild className="rounded-full font-bold text-md">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
@@ -72,7 +72,7 @@ export default function HeroSection() {
                   Portfolio
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" asChild className="font-bold">
+              <Button size="lg" variant="secondary" asChild className="rounded-full font-bold text-md">
                 <a href="mailto:gopichandtlr@gmail.com" target="_blank" rel="noopener noreferrer">
                   <Mail />
                   Mail me
