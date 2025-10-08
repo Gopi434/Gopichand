@@ -11,8 +11,8 @@ import { cn } from '@/lib/utils';
 
 const videoThumbnail = PlaceHolderImages.find(img => img.id === 'hero-video-thumbnail');
 
-const roles = [
-  'UI/UX Designer',
+const initialRole = 'UI/UX Designer';
+const animatedRoles = [
   'Graphic Designer',
   'Motion Designer',
   'Web Developer',
@@ -22,12 +22,22 @@ const roles = [
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [currentRole, setCurrentRole] = useState(initialRole);
+  const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      setCurrentRole((prevRole) => {
+        if (prevRole === initialRole) {
+          return animatedRoles[0];
+        }
+        const currentIndex = animatedRoles.indexOf(prevRole);
+        const nextIndex = (currentIndex + 1) % animatedRoles.length;
+        return animatedRoles[nextIndex];
+      });
+      setAnimationKey(prevKey => prevKey + 1);
     }, 2000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -38,22 +48,22 @@ export default function HeroSection() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8">
             
-            <div>
+            <div className="space-y-4">
               <Image
                 src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                 alt="Gopi Icon Logo"
                 width={110}
                 height={110}
-                className="mb-8"
+                className="mx-auto"
               />
             </div>
 
             <div className="flex flex-col items-center space-y-2">
               <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
-              <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
+              <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-16">
                 <h1 className="mr-2.5">Product Designer &amp;</h1>
-                <span key={currentRoleIndex} className="text-muted-foreground animate-slide-up-fade-in-out">
-                  {roles[currentRoleIndex]}
+                <span key={animationKey} className="text-muted-foreground animate-slide-up-fade-in-out">
+                  {currentRole}
                 </span>
               </div>
             </div>
