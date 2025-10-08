@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div className={cn(
               "flex flex-col sm:flex-row gap-5 pb-10 transition-opacity duration-300 pt-7"
             )}>
-              <Button size="lg" variant="default" asChild className="rounded-full font-bold text-md">
+              <Button size="lg" variant="default" asChild className="rounded-full font-bold text-md px-6">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
