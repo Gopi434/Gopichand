@@ -23,11 +23,16 @@ const roles = [
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 1500);
+      setIsAnimating(false);
+      setTimeout(() => {
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        setIsAnimating(true);
+      }, 100); // Short delay to allow state update before re-applying animation
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -37,6 +42,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8">
+            
             <div>
               <Image
                 src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
@@ -51,16 +57,18 @@ export default function HeroSection() {
               <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
               <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
                 <h1 className="mr-2.5">Product Designer &amp;</h1>
-                <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
-                  {roles[currentRoleIndex]}
-                </span>
+                {isAnimating && (
+                  <span key={currentRoleIndex} className="text-muted-foreground animate-slide-up-and-fade">
+                    {roles[currentRoleIndex]}
+                  </span>
+                )}
               </div>
             </div>
-
+            
             <div className={cn(
-              "flex flex-col sm:flex-row gap-5 pb-10 transition-opacity duration-300 pt-7"
+              "flex flex-col sm:flex-row gap-3 pb-10 transition-opacity duration-300 pt-7"
             )}>
-              <Button size="lg" variant="default" asChild className="rounded-full font-bold text-md px-6">
+              <Button size="lg" asChild className="rounded-full font-bold text-md px-5">
                 <a href="https://www.behance.net/gopichandtlr" target="_blank" rel="noopener noreferrer">
                   <Image
                     src="https://raw.githubusercontent.com/Gopi434/Media/8bbcd22a4eb04dd5149bac6fe0bb89b09bfb3360/behance%20icon.svg"
