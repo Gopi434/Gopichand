@@ -27,14 +27,16 @@ export default function ClientsSection() {
                   return (
                     <div key={client.name} className="flex justify-center group">
                       {clientImage ? (
-                        <Image
-                          src={clientImage.imageUrl}
-                          alt={client.name}
-                          data-ai-hint={clientImage.imageHint}
-                          width={120}
-                          height={60}
-                          className="h-10 object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
-                        />
+                        <div className="flex h-16 w-32 items-center justify-center">
+                          <Image
+                            src={clientImage.imageUrl}
+                            alt={client.name}
+                            data-ai-hint={clientImage.imageHint}
+                            width={120}
+                            height={60}
+                            className="max-h-10 w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                          />
+                        </div>
                       ) : (
                         <div className="h-10 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">
                           Logo
