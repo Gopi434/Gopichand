@@ -48,8 +48,8 @@ export default function HeroSection() {
               <Image
                 src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
                 alt="Gopi Icon Logo"
-                width={110}
-                height={110}
+                width={90}
+                height={90}
                 className="mx-auto"
               />
             </div>
