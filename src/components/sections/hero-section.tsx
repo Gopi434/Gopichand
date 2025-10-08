@@ -11,8 +11,8 @@ import { cn } from '@/lib/utils';
 
 const videoThumbnail = PlaceHolderImages.find(img => img.id === 'hero-video-thumbnail');
 
-const initialRole = 'UI/UX Designer';
 const animatedRoles = [
+  'UI/UX Designer',
   'Graphic Designer',
   'Motion Designer',
   'Web Developer',
@@ -22,24 +22,21 @@ const animatedRoles = [
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [currentRole, setCurrentRole] = useState(initialRole);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRole((prevRole) => {
-        if (prevRole === initialRole) {
-          return animatedRoles[0];
-        }
-        const currentIndex = animatedRoles.indexOf(prevRole);
-        const nextIndex = (currentIndex + 1) % animatedRoles.length;
-        return animatedRoles[nextIndex];
-      });
+      if (!hasStarted) {
+        setHasStarted(true);
+      }
       setAnimationKey(prevKey => prevKey + 1);
+      setCurrentRoleIndex(prevIndex => (prevIndex + 1) % animatedRoles.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [hasStarted]);
 
   return (
     <>
@@ -47,7 +44,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="flex flex-col items-center space-y-8">
-            
             <div className="space-y-4">
               <Image
                 src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
@@ -62,8 +58,14 @@ export default function HeroSection() {
               <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
               <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-16">
                 <h1 className="mr-2.5">Product Designer &amp;</h1>
-                <span key={animationKey} className="text-muted-foreground animate-slide-up-fade-in-out">
-                  {currentRole}
+                <span
+                  key={animationKey}
+                  className={cn(
+                    "text-muted-foreground",
+                    hasStarted && "animate-slide-up-fade-in-out"
+                  )}
+                >
+                  {animatedRoles[currentRoleIndex]}
                 </span>
               </div>
             </div>
