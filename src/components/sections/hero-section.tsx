@@ -36,20 +36,25 @@ export default function HeroSection() {
       <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-background -z-10" />
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="flex flex-col items-center space-y-6">
-            <Image
-              src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
-              alt="Gopi Icon Logo"
-              width={110}
-              height={110}
-              className="mb-8"
-            />
-            <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground">Hi, This is Gopichand. I am a</p>
-            <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
-              <h1 className="mr-2.5">Product Designer &amp;</h1>
-              <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
-                {roles[currentRoleIndex]}
-              </span>
+          <div className="flex flex-col items-center space-y-8">
+            <div>
+              <Image
+                src="https://raw.githubusercontent.com/Gopi434/Media/19b73e7aafdff5a45cc130ae2a43b7f2a1e41fbb/Logo%20icon.svg"
+                alt="Gopi Icon Logo"
+                width={110}
+                height={110}
+                className="mb-8"
+              />
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground">Hi, This is Gopichand. I am a</p>
+              <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-12">
+                <h1 className="mr-2.5">Product Designer &amp;</h1>
+                <span key={currentRoleIndex} className="text-primary animate-slide-up-and-fade ">
+                  {roles[currentRoleIndex]}
+                </span>
+              </div>
             </div>
 
             <div className={cn(
@@ -74,6 +79,7 @@ export default function HeroSection() {
                 </a>
               </Button>
             </div>
+            
             <div className="w-full pt-8 pb-16">
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>

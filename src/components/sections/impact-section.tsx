@@ -36,7 +36,7 @@ export default function ImpactSection() {
                 </div>
               )}
               <div>
-                <p className="font-semibold">Gopichand Talluri</p>
+                <p className="font-semibold text-2xl">Gopichand</p>
                 <p className="text-sm text-muted-foreground">Product Designer</p>
               </div>
             </div>
