@@ -3,7 +3,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const clients = [
   { name: 'Client 1', imageId: 'client-fintech', width: 140, height: 60 },
-  { name: 'Client 2', imageId: 'client-web3', width: 150, height: 60, className: "mx-4" },
+  { name: 'Client 2', imageId: 'client-web3', width: 150, height: 60, className: "mx-8" },
   { name: 'Client 3', imageId: 'client-ai', width: 200, height: 75 },
   { name: 'Client 4', imageId: 'client-media', width: 80, height: 45 },
   { name: 'Client 5', imageId: 'client-placeholder-1', width: 120, height: 60 },
