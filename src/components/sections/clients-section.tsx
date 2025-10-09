@@ -4,8 +4,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const clients = [
   { name: 'Client 1', imageId: 'client-fintech', width: 120, height: 60 },
   { name: 'Client 2', imageId: 'client-web3', width: 120, height: 60 },
-  { name: 'Client 3', imageId: 'client-ai', width: 120, height: 60 },
-  { name: 'Client 4', imageId: 'client-media', width: 120, height: 60 },
+  { name: 'Client 3', imageId: 'client-ai', width: 150, height: 75 },
+  { name: 'Client 4', imageId: 'client-media', width: 90, height: 45 },
   { name: 'Client 5', imageId: 'client-placeholder-1', width: 120, height: 60 },
   { name: 'Client 6', imageId: 'client-placeholder-2', width: 120, height: 60 },
 ];
@@ -32,8 +32,9 @@ export default function ClientsSection() {
                             src={clientImage.imageUrl}
                             alt={client.name}
                             data-ai-hint={clientImage.imageHint}
-                            width={client.width || 120}
-                            height={client.height || 60}
+                            width={client.width}
+                            height={client.height}
+                            style={{ width: client.width, height: 'auto' }}
                             className="max-h-10 w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                           />
                         </div>
