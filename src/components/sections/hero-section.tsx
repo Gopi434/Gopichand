@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -59,8 +58,8 @@ export default function HeroSection() {
               <p className="text-xl sm:text-2xl md:text-3xl tracking-normal text-muted-foreground mb-0">
                 Hi, This is <span className="font-bold text-foreground">Gopichand</span>. I am a..
               </p>
-              <div className="flex flex-col md:flex-row md:items-center justify-center text-2xl sm:text-3xl md:text-4xl font-headline font-bold tracking-normal text-foreground h-auto md:h-16">
-                <h1 className="md:mr-2.5">Product Designer &</h1>
+              <div className="flex flex-col lg:flex-row lg:items-center justify-center text-2xl sm:text-3xl lg:text-5xl font-headline font-bold tracking-normal text-foreground h-auto lg:h-16">
+                <h1 className="lg:mr-2.5">Product Designer &</h1>
                 <span
                   key={animationKey}
                   className={cn(
