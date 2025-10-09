@@ -3,7 +3,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const clients = [
   { name: 'Client 1', imageId: 'client-fintech', width: 140, height: 60 },
-  { name: 'Client 2', imageId: 'client-web3', width: 300, height: 70 },
+  { name: 'Client 2', imageId: 'client-web3', width: 160, height: 60, className: "" },
   { name: 'Client 3', imageId: 'client-ai', width: 200, height: 75 },
   { name: 'Client 4', imageId: 'client-media', width: 80, height: 45 },
   { name: 'Client 5', imageId: 'client-placeholder-1', width: 120, height: 60 },
@@ -21,11 +21,11 @@ export default function ClientsSection() {
             <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">Top Clients I Served</h2>
           </div>
           <div className="mt-12">
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-x-12">
                 {clients.map((client) => {
                   const clientImage = getImage(client.imageId);
                   return (
-                    <div key={client.name} className={`flex justify-center items-center group h-16 ${client.className || ''}`}>
+                    <div key={client.name} className="flex justify-center items-center group h-16">
                       {clientImage ? (
                           <Image
                             src={clientImage.imageUrl}
@@ -33,8 +33,8 @@ export default function ClientsSection() {
                             data-ai-hint={clientImage.imageHint}
                             width={client.width}
                             height={client.height}
-                            style={{ width: client.width, height: 'auto' }}
-                            className="max-h-full w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                            style={{ width: 'auto', height: client.height / 1.5 }}
+                            className="max-h-full object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                           />
                       ) : (
                         <div className="h-10 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">
