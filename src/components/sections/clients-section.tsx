@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const clients = [
-  { name: 'Client 1', imageId: 'client-fintech', width: 120, height: 60 },
-  { name: 'Client 2', imageId: 'client-web3', width: 120, height: 60 },
-  { name: 'Client 3', imageId: 'client-ai', width: 150, height: 75 },
-  { name: 'Client 4', imageId: 'client-media', width: 90, height: 45 },
+  { name: 'Client 1', imageId: 'client-fintech', width: 140, height: 60 },
+  { name: 'Client 2', imageId: 'client-web3', width: 150, height: 60, className: "mx-4" },
+  { name: 'Client 3', imageId: 'client-ai', width: 200, height: 75 },
+  { name: 'Client 4', imageId: 'client-media', width: 80, height: 45 },
   { name: 'Client 5', imageId: 'client-placeholder-1', width: 120, height: 60 },
-  { name: 'Client 6', imageId: 'client-placeholder-2', width: 120, height: 60 },
+  { name: 'Client 6', imageId: 'client-placeholder-2', width: 140, height: 60 },
 ];
 
 const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
@@ -25,7 +25,7 @@ export default function ClientsSection() {
                 {clients.map((client) => {
                   const clientImage = getImage(client.imageId);
                   return (
-                    <div key={client.name} className="flex justify-center items-center group h-16">
+                    <div key={client.name} className={`flex justify-center items-center group h-16 ${client.className || ''}`}>
                       {clientImage ? (
                           <Image
                             src={clientImage.imageUrl}
