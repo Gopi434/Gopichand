@@ -25,9 +25,8 @@ export default function ClientsSection() {
                 {clients.map((client) => {
                   const clientImage = getImage(client.imageId);
                   return (
-                    <div key={client.name} className="flex justify-center group">
+                    <div key={client.name} className="flex justify-center items-center group h-16">
                       {clientImage ? (
-                        <div className="flex h-16 w-32 items-center justify-center">
                           <Image
                             src={clientImage.imageUrl}
                             alt={client.name}
@@ -35,9 +34,8 @@ export default function ClientsSection() {
                             width={client.width}
                             height={client.height}
                             style={{ width: client.width, height: 'auto' }}
-                            className="max-h-10 w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                            className="max-h-full w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                           />
-                        </div>
                       ) : (
                         <div className="h-10 w-24 bg-muted rounded-md flex items-center justify-center text-muted-foreground text-xs">
                           Logo
