@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const clients = [
-  { name: 'Client 1', imageId: 'client-fintech' },
-  { name: 'Client 2', imageId: 'client-web3' },
-  { name: 'Client 3', imageId: 'client-ai' },
-  { name: 'Client 4', imageId: 'client-media' },
-  { name: 'Client 5', imageId: 'client-placeholder-1' },
-  { name: 'Client 6', imageId: 'client-placeholder-2' },
+  { name: 'Client 1', imageId: 'client-fintech', width: 120, height: 60 },
+  { name: 'Client 2', imageId: 'client-web3', width: 120, height: 60 },
+  { name: 'Client 3', imageId: 'client-ai', width: 120, height: 60 },
+  { name: 'Client 4', imageId: 'client-media', width: 120, height: 60 },
+  { name: 'Client 5', imageId: 'client-placeholder-1', width: 120, height: 60 },
+  { name: 'Client 6', imageId: 'client-placeholder-2', width: 120, height: 60 },
 ];
 
 const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
@@ -32,8 +32,8 @@ export default function ClientsSection() {
                             src={clientImage.imageUrl}
                             alt={client.name}
                             data-ai-hint={clientImage.imageHint}
-                            width={120}
-                            height={60}
+                            width={client.width || 120}
+                            height={client.height || 60}
                             className="max-h-10 w-auto object-contain text-muted-foreground grayscale opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                           />
                         </div>
