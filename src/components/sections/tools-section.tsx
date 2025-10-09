@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
@@ -26,7 +27,7 @@ export default function ToolsSection() {
     <section id="tools" className="w-full py-12 md:py-24 lg:py-30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl md:text-5xl">Tools I Create With</h2>
+          <h2 className="text-3xl font-bold font-headline tracking-normal sm:text-4xl">Tools I Create With</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl lg:text-base xl:text-xl">
           These are the tools that shape my ideas into visuals, prototypes and motion. Each one’s part of my daily mix, helping me move from concept to final design seamlessly.
           </p>
