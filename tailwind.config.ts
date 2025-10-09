@@ -18,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Poppins', 'serif'],
+        headline: ['"Lemon Milk"', 'serif'],
         code: ['monospace'],
       },
       colors: {

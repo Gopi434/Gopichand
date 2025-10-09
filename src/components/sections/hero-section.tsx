@@ -57,7 +57,7 @@ export default function HeroSection() {
             <div className="flex flex-col items-center space-y-2">
               <p className="text-xl sm:text-2xl md:text-4xl tracking-tight text-muted-foreground mb-2">Hi, This is Gopichand. I am a..</p>
               <div className="flex items-center justify-center text-2xl sm:text-3xl md:text-6xl font-headline font-bold tracking-tight text-foreground h-16">
-                <h1 className="mr-2.5">Product Designer &amp;</h1>
+                <h1 className="mr-2.5">Product Designer &</h1>
                 <span
                   key={animationKey}
                   className={cn(

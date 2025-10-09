@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Lemon Milk';
+    src: url('https://raw.githubusercontent.com/Gopi434/Media/main/Gopichand%20assets/Font/LEMONMILK-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
